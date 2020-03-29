@@ -3,22 +3,19 @@
     <div>
       <logo />
       <h1 class="title">
-        fast-notion-lp
+        Privacy Policy
       </h1>
-      <h2 class="subtitle">
-        My exceptional Nuxt.js project
-      </h2>
+
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <p>
+          Fast Notion does not collect, use, or disclose personal information to
+          third parties.
+        </p>
+        <p>
+          For inquiries regarding this policy, please contact the following
+          address.
+        </p>
+        <p>xxx35d@gmail.com</p>
       </div>
     </div>
   </div>
@@ -28,9 +25,7 @@
 import Vue from 'vue'
 
 export default Vue.extend({
-  components: {
-    Logo
-  }
+  components: {}
 })
 </script>
 
@@ -49,7 +44,7 @@ export default Vue.extend({
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 32px;
   color: #35495e;
   letter-spacing: 1px;
 }
