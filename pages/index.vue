@@ -3,6 +3,9 @@
     <div>
       Fast Notion
     </div>
+    <p>
+      <nuxt-link to="/playground">PLAYGROUND</nuxt-link>
+    </p>
   </div>
 </template>
 

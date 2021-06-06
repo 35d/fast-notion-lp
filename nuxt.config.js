@@ -31,7 +31,11 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    // SEE https://composition-api.nuxtjs.org/getting-started/setup
+    '@nuxtjs/composition-api/module'
+  ],
   /*
    ** Nuxt.js modules
    */
