@@ -1,40 +1,13 @@
 <template>
   <div>
     <h1>Fast Notion Web (β)</h1>
-    <div class="todo">
-      <p>TODO リスト</p>
-      <p>- [x] Composition API 導入</p>
-      <p>- [x] TODO トークン・URL を入力できるようにする</p>
-      <p>- [x] API 接続して、投稿できるようにする</p>
-      <p>- [x] ストレージに保存できるようにする</p>
-      <p>- [x] SCSS 使えるようにする</p>
-      <p>- [ ] データベースモード対応</p>
-      <p>- [ ] リファクタ</p>
-      <p>- [ ] スタイルを当てる</p>
-      <hr />
-    </div>
-    <form>
-      <label>
-        <span>
-          TOKEN
-        </span>
-        <input
-          v-model="state.settingForm.token"
-          type="text"
-          placeholder="INPUT YOUR TOKEN"
-        />
-      </label>
-      <label>
-        <span>
-          URL
-        </span>
-        <input
-          v-model="state.settingForm.url"
-          type="text"
-          placeholder="INPUT YOUR TOKEN"
-        />
-      </label>
-    </form>
+    <ToDoSection />
+    <Modal
+      :should-show-modal="state.shouldShowSettingModal"
+      :on-close="_onClickClose"
+    >
+      <SettingSection />
+    </Modal>
     <form>
       <label>
         <span>
@@ -46,36 +19,37 @@
           placeholder="INPUT YOUR NOTE"
         />
       </label>
-      <button @click.prevent="_onClickSubmitButton">POST</button>
+      <div>
+        <button @click.prevent="_onClickSubmitButton">POST</button>
+        <p>{{ state.status }}</p>
+      </div>
+      <a @click.prevent="_onClickSettingButton">SETTING</a>
     </form>
   </div>
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  onMounted,
-  reactive,
-  watch
-} from '@nuxtjs/composition-api'
+import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import SettingSection from '@/components/container/playground/SettingSection.vue'
+import ToDoSection from '@/components/container/playground/ToDoSection.vue'
+import { Modal } from '@/components/presentational/atoms'
 
 const baseUrl = 'https://fast-notion.appspot.com/v1'
 // const baseUrl = 'http://localhost:8080/v1'
 export const addUrl = `${baseUrl}/w/add`
 export const addDbUrl = `${baseUrl}/w/dbAdd`
 
-interface SettingForm {
-  url: string
-  token: string
-}
-
 interface PostForm {
   text: string
 }
 
+const STATUSES = ['', 'SENDING', 'SUCCESS', 'FAILED'] as const
+export type Status = typeof STATUSES[number]
+
 interface State {
-  settingForm: SettingForm
   postForm: PostForm
+  status: Status
+  shouldShowSettingModal: boolean
 }
 
 export interface PostBody {
@@ -89,62 +63,64 @@ export interface PostBody {
 }
 
 export default defineComponent({
+  components: {
+    SettingSection,
+    ToDoSection,
+    Modal
+  },
   setup(_props, { root }) {
     const state = reactive<State>({
-      settingForm: {
-        url: '',
-        token: ''
-      },
       postForm: {
         text: ''
-      }
+      },
+      status: '',
+      shouldShowSettingModal: false
     })
 
-    onMounted(() => {
-      retrive()
-    })
-
-    const retrive = () => {
+    const _onClickSubmitButton = () => {
       const url = window.localStorage.getItem('fast_notion_url')
       const token = window.localStorage.getItem('fast_notion_token')
 
-      if (url) state.settingForm.url = url
-      if (token) state.settingForm.token = token
-    }
+      if (!url) return
+      if (!token) return
 
-    watch(
-      () => state.settingForm.url,
-      (url: string) => {
-        window.localStorage.setItem('fast_notion_url', url)
-      }
-    )
-
-    watch(
-      () => state.settingForm.token,
-      (token: string) => {
-        window.localStorage.setItem('fast_notion_token', token)
-      }
-    )
-
-    const _onClickSubmitButton = () => {
       const data: PostBody = {
         key: 'NrcSQQ3PWMX3_sgdfFju',
-        token_v2: state.settingForm.token,
-        notion_url: state.settingForm.url,
+        token_v2: token,
+        notion_url: url,
         text: state.postForm.text,
         type: ''
       }
 
-      root.$axios.post(addUrl, data)
+      state.status = 'SENDING'
+
+      root.$axios
+        .post(addUrl, data)
+        .then(() => {
+          state.status = 'SUCCESS'
+          state.postForm.text = ''
+        })
+        .catch(() => {
+          state.status = 'FAILED'
+        })
+        .finally(() => {
+          setTimeout(() => {
+            state.status = ''
+          }, 1000)
+        })
     }
 
-    return { state, _onClickSubmitButton }
+    const _onClickSettingButton = () => {
+      state.shouldShowSettingModal = true
+    }
+
+    const _onClickClose = () => {
+      state.shouldShowSettingModal = false
+    }
+
+    return { state, _onClickSubmitButton, _onClickSettingButton, _onClickClose }
   }
 })
 </script>
 
-<style lang="scss" scoped>
-.div {
-  background-color: red;
-}
-</style>
+<style lang="scss" scoped></style>
