@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PortalTarget name="global-modal" class="l-modal"> </PortalTarget>
     <nuxt />
   </div>
 </template>
@@ -15,6 +16,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+.l-modal {
+  z-index: 100;
+  position: relative;
 }
 
 *,

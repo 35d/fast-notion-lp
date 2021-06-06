@@ -57,7 +57,6 @@ export default defineComponent({
 }
 
 .modal {
-  position: relative;
   width: calc(100% - 32px);
   min-height: 320px;
   height: auto;
