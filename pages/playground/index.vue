@@ -8,8 +8,11 @@
         - [x] TODO トークン・URL を入力できるようにする
       </p>
 
-      <p>- [ ] API 接続して、投稿できるようにする</p>
-      <p>- [ ] ストレージに保存できるようにする</p>
+      <p>- [x] API 接続して、投稿できるようにする</p>
+      <p>- [x] ストレージに保存できるようにする</p>
+      <p>- [ ] データベースモード対応</p>
+      <p>- [ ] リファクタ</p>
+      <p>- [ ] スタイルを当てる</p>
       <hr />
     </div>
     <form>
@@ -47,16 +50,21 @@
       </label>
       <button @click.prevent="_onClickSubmitButton">POST</button>
     </form>
-    {{ state }}
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  onMounted,
+  reactive,
+  watch
+} from '@nuxtjs/composition-api'
 
 const baseUrl = 'https://fast-notion.appspot.com/v1'
-export const addUrl = `${baseUrl}/add`
-export const addDbUrl = `${baseUrl}/dbAdd`
+// const baseUrl = 'http://localhost:8080/v1'
+export const addUrl = `${baseUrl}/w/add`
+export const addDbUrl = `${baseUrl}/w/dbAdd`
 
 interface SettingForm {
   url: string
@@ -94,17 +102,42 @@ export default defineComponent({
       }
     })
 
+    onMounted(() => {
+      retrive()
+    })
+
+    const retrive = () => {
+      const url = window.localStorage.getItem('fast_notion_url')
+      const token = window.localStorage.getItem('fast_notion_token')
+
+      if (url) state.settingForm.url = url
+      if (token) state.settingForm.token = token
+    }
+
+    watch(
+      () => state.settingForm.url,
+      (url: string) => {
+        window.localStorage.setItem('fast_notion_url', url)
+      }
+    )
+
+    watch(
+      () => state.settingForm.token,
+      (token: string) => {
+        window.localStorage.setItem('fast_notion_token', token)
+      }
+    )
+
     const _onClickSubmitButton = () => {
       const data: PostBody = {
-        key: '5NGb6uKrbSW4Q6SMsJL8sYuBY4ZFPYD',
+        key: 'NrcSQQ3PWMX3_sgdfFju',
         token_v2: state.settingForm.token,
         notion_url: state.settingForm.url,
         text: state.postForm.text,
         type: ''
       }
-      root.$axios.post(addUrl, data)
 
-      alert('@')
+      root.$axios.post(addUrl, data)
     }
 
     return { state, _onClickSubmitButton }
