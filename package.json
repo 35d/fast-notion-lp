@@ -17,6 +17,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/composition-api": "^0.24.3",
     "@nuxtjs/dotenv": "^1.4.0",
+    "axios": "^0.21.1",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
