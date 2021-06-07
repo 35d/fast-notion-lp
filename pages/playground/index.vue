@@ -40,7 +40,7 @@
     <div class="l-footer">
       <div>
         <button class="button-a" @click.prevent="_onClickSettingButton">
-          <span class="button-a__emoji">🔧</span> SETTING
+          <span class="button-a__emoji">🔧</span>
         </button>
         <button class="button-a" @click.prevent="_onClickToDoButton">
           <span class="button-a__emoji">🐈</span>
