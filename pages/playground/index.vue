@@ -16,7 +16,6 @@
           <ToDoSection />
         </Modal>
       </Portal>
-      <ToDoSection />
       <form class="card">
         <label>
           <span>
@@ -55,6 +54,7 @@ import SettingSection from '@/components/container/playground/SettingSection.vue
 import ToDoSection from '@/components/container/playground/ToDoSection.vue'
 import { Modal } from '@/components/presentational/atoms'
 import { ADD_URL } from '@/config'
+import { buildMemoPostBody, MemoPostBody } from '@/models/memo'
 
 interface PostForm {
   text: string
@@ -68,14 +68,6 @@ interface State {
   status: Status
   shouldShowSettingModal: boolean
   shouldShowToDoModal: boolean
-}
-
-export interface PostBody {
-  key: string
-  token_v2: string
-  notion_url: string
-  text: string
-  type: string
 }
 
 export default defineComponent({
@@ -95,24 +87,10 @@ export default defineComponent({
     })
 
     const _onClickSubmitButton = () => {
-      const url = window.localStorage.getItem('fast_notion_url')
-      const token = window.localStorage.getItem('fast_notion_token')
-
-      if (!url) return
-      if (!token) return
-
-      const data: PostBody = {
-        key: 'NrcSQQ3PWMX3_sgdfFju',
-        token_v2: token,
-        notion_url: url,
-        text: state.postForm.text,
-        type: ''
-      }
-
       state.status = 'SENDING'
 
       root.$axios
-        .post(ADD_URL, data)
+        .post(ADD_URL, buildMemoPostBody(state.postForm.text))
         .then(() => {
           state.status = 'SUCCESS'
           state.postForm.text = ''
