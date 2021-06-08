@@ -9,17 +9,8 @@
     <p>- [ ] データベースモード対応</p>
     <p>- [ ] リファクタ</p>
     <p>- [ ] スタイルを当てる</p>
+    <p>- [ ] アプリのリンクを付ける</p>
   </div>
 </template>
 
-<style lang="scss" scoped>
-p {
-  font-size: 0.9rem;
-  margin-bottom: 0.1rem;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-</style>
+<style lang="scss" scoped></style>
