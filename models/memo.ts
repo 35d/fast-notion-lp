@@ -1,3 +1,5 @@
+import { getToken, getUrl } from './setting'
+
 export interface MemoPostBody {
   key: string
   token_v2: string
@@ -14,11 +16,18 @@ export interface MemoPostForm {
 }
 
 export const buildMemoPostReqBody = (text: string) => {
-  const url = window.localStorage.getItem('fast_notion_url')
-  const token = window.localStorage.getItem('fast_notion_token')
+  const url = getUrl()
+  const token = getToken()
 
-  if (!url) return
-  if (!token) return
+  if (!url) {
+    alert('Please set url')
+    return
+  }
+
+  if (!token) {
+    alert('Please set token')
+    return
+  }
 
   return {
     key: 'NrcSQQ3PWMX3_sgdfFju',
