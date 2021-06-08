@@ -10,12 +10,13 @@
           <SettingSection />
         </Modal>
       </Portal>
+      <ToDoSection />
       <!-- <Portal to="global-modal">
         <Modal
           :should-show-modal="state.shouldShowToDoModal"
           :on-close="_onClickToDoClose"
         >
-          <ToDoSection />
+          
         </Modal>
       </Portal> -->
       <form class="card">
@@ -55,11 +56,7 @@ import { defineComponent, reactive } from '@nuxtjs/composition-api'
 import SettingSection from '@/components/container/playground/SettingSection.vue'
 import ToDoSection from '@/components/container/playground/ToDoSection.vue'
 import { Modal } from '@/components/presentational/atoms'
-
-const baseUrl = 'https://fast-notion.appspot.com/v1'
-// const baseUrl = 'http://localhost:8080/v1'
-export const addUrl = `${baseUrl}/w/add`
-export const addDbUrl = `${baseUrl}/w/dbAdd`
+import { ADD_URL, ADD_DB_URL } from '@/config'
 
 interface PostForm {
   text: string
@@ -77,9 +74,7 @@ interface State {
 
 export interface PostBody {
   key: string
-  // eslint-disable-next-line
   token_v2: string
-  // eslint-disable-next-line
   notion_url: string
   text: string
   type: string
@@ -119,7 +114,7 @@ export default defineComponent({
       state.status = 'SENDING'
 
       root.$axios
-        .post(addUrl, data)
+        .post(ADD_URL, data)
         .then(() => {
           state.status = 'SUCCESS'
           state.postForm.text = ''
