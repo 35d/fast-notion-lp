@@ -9,16 +9,14 @@
         >
           <SettingSection />
         </Modal>
-      </Portal>
-      <ToDoSection />
-      <!-- <Portal to="global-modal">
         <Modal
           :should-show-modal="state.shouldShowToDoModal"
           :on-close="_onClickToDoClose"
         >
-          
+          <ToDoSection />
         </Modal>
-      </Portal> -->
+      </Portal>
+      <ToDoSection />
       <form class="card">
         <label>
           <span>
@@ -56,7 +54,7 @@ import { defineComponent, reactive } from '@nuxtjs/composition-api'
 import SettingSection from '@/components/container/playground/SettingSection.vue'
 import ToDoSection from '@/components/container/playground/ToDoSection.vue'
 import { Modal } from '@/components/presentational/atoms'
-import { ADD_URL, ADD_DB_URL } from '@/config'
+import { ADD_URL } from '@/config'
 
 interface PostForm {
   text: string
