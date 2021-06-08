@@ -6,7 +6,14 @@ export interface MemoPostBody {
   type: string
 }
 
-export const buildMemoPostBody = (text: string) => {
+/**
+ * メモを投稿するフォームの型定義
+ */
+export interface MemoPostForm {
+  text: string
+}
+
+export const buildMemoPostReqBody = (text: string) => {
   const url = window.localStorage.getItem('fast_notion_url')
   const token = window.localStorage.getItem('fast_notion_token')
 

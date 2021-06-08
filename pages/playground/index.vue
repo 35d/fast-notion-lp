@@ -54,17 +54,13 @@ import SettingSection from '@/components/container/playground/SettingSection.vue
 import ToDoSection from '@/components/container/playground/ToDoSection.vue'
 import { Modal } from '@/components/presentational/atoms'
 import { ADD_URL } from '@/config'
-import { buildMemoPostBody, MemoPostBody } from '@/models/memo'
-
-interface PostForm {
-  text: string
-}
+import { buildMemoPostReqBody, MemoPostForm } from '@/models/memo'
 
 const STATUSES = ['', 'SENDING', 'SUCCESS', 'FAILED'] as const
 export type Status = typeof STATUSES[number]
 
 interface State {
-  postForm: PostForm
+  postForm: MemoPostForm
   status: Status
   shouldShowSettingModal: boolean
   shouldShowToDoModal: boolean
@@ -90,7 +86,7 @@ export default defineComponent({
       state.status = 'SENDING'
 
       root.$axios
-        .post(ADD_URL, buildMemoPostBody(state.postForm.text))
+        .post(ADD_URL, buildMemoPostReqBody(state.postForm.text))
         .then(() => {
           state.status = 'SUCCESS'
           state.postForm.text = ''
@@ -134,78 +130,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-:root {
-  --positionX: 20px;
-  --positionXOpposite: -20px;
-  --positionY: 20px;
-  --positionYOpposite: -20px;
-  --angle: 145deg;
-  --blur: 60px;
-  --textColor: #001f3f;
-  --textColorOpposite: #e0e0e0;
-  --baseColor: #e0e0e0;
-  --darkColor: #bebebe;
-  --lightColor: #ffffff;
-  --firstGradientColor: #e0e0e0;
-  --secondGradientColor: #e0e0e0;
-  --size: 300px;
-  --radius: 50px;
-}
-
-.l-main {
-  background-color: #e0e0e0;
-  min-height: 100vh;
-  color: #001f3f;
-  color: var(--textColor);
-  font-family: Muli, sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.l-footer {
-  position: fixed;
-  bottom: 32px;
-  display: flex;
-}
-
-.button-a {
-  height: 44px;
-  line-height: 44px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  color: #001f3f;
-  background-color: #f8f8ff;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  padding: 7px 15px;
-  font-size: 16px;
-  letter-spacing: 0.6px;
-  margin: 0 auto;
-  -webkit-transition: opacity 0.1s linear;
-  transition: opacity 0.1s linear;
-  cursor: pointer;
-
-  &__ {
-    &emoji {
-      font-size: 0.9rem;
-      margin-right: 0.3rem;
-    }
-  }
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 20px 30px;
-  border-radius: 30px;
-  text-align: left;
-  border-radius: 16px;
-  background: #e0e0e0;
-  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
-}
+@import './index.scss';
 </style>
