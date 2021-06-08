@@ -15,6 +15,9 @@ export interface MemoPostForm {
   text: string
 }
 
+/**
+ * メモを投稿用のリクエストボディの組み立て
+ */
 export const buildMemoPostReqBody = (text: string) => {
   const url = getUrl()
   const token = getToken()

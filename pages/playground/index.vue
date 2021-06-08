@@ -1,7 +1,8 @@
 <template>
   <div class="l-main">
     <div class="l-main__inner">
-      <h1>Fast Notion Web (β)</h1>
+      <h1 class="heading1">Fast Notion Web (β)</h1>
+      <p class="tac">Quick memo for Notion</p>
       <Portal to="global-modal">
         <Modal
           :should-show-modal="state.shouldShowSettingModal"
