@@ -1,6 +1,6 @@
 <template>
   <div class="todo">
-    <h2>TODO</h2>
+    <h2 class="mb16">TODO</h2>
     <p>- [x] Composition API 導入</p>
     <p>- [x] TODO トークン・URL を入力できるようにする</p>
     <p>- [x] API 接続して、投稿できるようにする</p>
