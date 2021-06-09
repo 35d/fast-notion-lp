@@ -7,10 +7,14 @@
     <p>- [x] ストレージに保存できるようにする</p>
     <p>- [x] SCSS 使えるようにする</p>
     <p>- [ ] データベースモード対応</p>
-    <p>- [ ] リファクタ</p>
-    <p>- [ ] スタイルを当てる</p>
+    <p>- [x] リファクタ</p>
+    <p>- [x] スタイルを当てる</p>
     <p>- [ ] アプリのリンクを付ける</p>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+p {
+  font-size: 1.4rem;
+}
+</style>
