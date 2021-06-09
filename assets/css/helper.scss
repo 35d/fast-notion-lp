@@ -26,8 +26,8 @@
   .pl#{$i * 4} {
     padding-left: #{$i * 4}px !important;
   }
-  .fs#{$i * 2} {
-    font-size: #{$i * 2}px !important;
+  .fs#{$i * 1} {
+    font-size: #{$i * 0.1}rem !important;
   }
   .lh#{$i * 2} {
     line-height: #{$i * 2}px !important;

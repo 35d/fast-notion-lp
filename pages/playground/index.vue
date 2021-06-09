@@ -1,8 +1,8 @@
 <template>
   <div class="l-main">
-    <div class="l-main__inner">
-      <h1 class="heading1">Fast Notion Web (β)</h1>
-      <p class="tac mb32">Quick memo for Notion</p>
+    <div>
+      <h1 class="heading1 tac">Fast Notion Web (β)</h1>
+      <p class="fs16 tac mb32">Quick memo tool for Notion</p>
       <Portal to="global-modal">
         <Modal
           :should-show-modal="state.shouldShowSettingModal"
@@ -35,13 +35,25 @@
       </form>
     </div>
     <div class="l-footer">
-      <div>
-        <button class="button-a" @click.prevent="_onClickSettingButton">
+      <div class="df">
+        <button class="button-a mr8" @click.prevent="_onClickSettingButton">
           <span class="button-a__emoji">🔧</span>
         </button>
-        <button class="button-a" @click.prevent="_onClickToDoButton">
+        <button class="button-a mr8" @click.prevent="_onClickToDoButton">
           <span class="button-a__emoji">🐈</span>
         </button>
+        <a
+          href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
+          target="_blank"
+          class=""
+        >
+          <img
+            src="@/assets/img/app-store.svg"
+            alt="APP STORE のリンク"
+            class=""
+            height="44px"
+          />
+        </a>
       </div>
     </div>
   </div>

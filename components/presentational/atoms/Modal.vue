@@ -63,12 +63,13 @@ export default defineComponent({
   height: auto;
   background-color: #fff;
   padding: 24px 16px;
+  position: relative;
 
   &__ {
     &close-button-area {
       position: absolute;
       top: -24px;
-      right: 16px;
+      right: 8px;
     }
   }
 }
