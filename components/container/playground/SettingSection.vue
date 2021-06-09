@@ -1,27 +1,27 @@
 <template>
-  <div>
-    <form>
-      <label>
-        <span>
-          TOKEN
-        </span>
+  <div class="">
+    <form class="df fdc">
+      <label class="mb16 db">
+        <p class="label__text">TOKEN</p>
         <input
           v-model="state.settingForm.token"
+          class="wf"
           type="text"
           placeholder="INPUT YOUR TOKEN"
         />
       </label>
-      <label>
-        <span>
-          URL
-        </span>
+      <label class="mb24">
+        <p class="label__text">URL</p>
         <input
           v-model="state.settingForm.url"
+          class="wf"
           type="text"
           placeholder="INPUT YOUR TOKEN"
         />
       </label>
-      <button @click.prevent="_onClickSubmitButton">POST</button>
+      <div class="df jcc">
+        <button @click.prevent="_onClickSubmitButton">SAVE</button>
+      </div>
     </form>
   </div>
 </template>
@@ -30,8 +30,8 @@
 import {
   defineComponent,
   onMounted,
-  reactive,
-  watch
+  PropType,
+  reactive
 } from '@nuxtjs/composition-api'
 
 interface SettingForm {
@@ -44,7 +44,13 @@ interface State {
 }
 
 export default defineComponent({
-  setup() {
+  props: {
+    onClose: {
+      type: Function as PropType<() => {}>,
+      required: true
+    }
+  },
+  setup(props) {
     const state = reactive<State>({
       settingForm: {
         url: '',
@@ -67,6 +73,7 @@ export default defineComponent({
     const _onClickSubmitButton = () => {
       window.localStorage.setItem('fast_notion_token', state.settingForm.token)
       window.localStorage.setItem('fast_notion_url', state.settingForm.url)
+      props.onClose()
     }
 
     return { state, _onClickSubmitButton }
@@ -75,7 +82,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.div {
-  background-color: red;
+.label__text {
+  font-size: 1.2rem;
 }
 </style>

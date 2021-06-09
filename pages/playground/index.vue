@@ -2,13 +2,13 @@
   <div class="l-main">
     <div class="l-main__inner">
       <h1 class="heading1">Fast Notion Web (β)</h1>
-      <p class="tac mb16">Quick memo for Notion</p>
+      <p class="tac mb32">Quick memo for Notion</p>
       <Portal to="global-modal">
         <Modal
           :should-show-modal="state.shouldShowSettingModal"
           :on-close="_onClickClose"
         >
-          <SettingSection />
+          <SettingSection :on-close="_onClickClose" />
         </Modal>
         <Modal
           :should-show-modal="state.shouldShowToDoModal"
@@ -18,21 +18,19 @@
         </Modal>
       </Portal>
       <form class="card">
-        <label>
-          <span>
-            TEXT
-          </span>
-          <input
+        <label class="mb16 df">
+          <textarea
             v-model="state.postForm.text"
             type="text"
             placeholder="INPUT YOUR NOTE"
+            class="input f1"
           />
         </label>
-        <div>
-          <button @click.prevent="_onClickSubmitButton">
-            POST
+        <div class="df jcc">
+          <button class="button" @click.prevent="_onClickSubmitButton">
+            <span v-if="state.status">{{ state.status }}</span>
+            <span v-else>POST</span>
           </button>
-          <p>{{ state.status }}</p>
         </div>
       </form>
     </div>

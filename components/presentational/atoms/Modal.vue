@@ -57,8 +57,9 @@ export default defineComponent({
 }
 
 .modal {
-  width: calc(100% - 32px);
-  min-height: 320px;
+  width: calc(80% - 32px);
+  min-width: 320px;
+  /* min-height: 320px; */
   height: auto;
   background-color: #fff;
   padding: 24px 16px;

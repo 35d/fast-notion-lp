@@ -16,3 +16,23 @@ html {
 p {
   font-size: 2rem;
 }
+
+textarea,
+input {
+  border: 0px solid #001f3f;
+  border-bottom: 1px solid #001f3f;
+  padding: 8px 16px 4px 8px;
+  font-size: 1.4rem;
+  height: 36px;
+  background-color: transparent;
+}
+
+button {
+  border: 3px solid #001f3f;
+  background-color: #001f3f;
+  color: #fff;
+  height: 32px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0 16px;
+}
