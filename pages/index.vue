@@ -42,6 +42,9 @@
         <button class="button-a mr8" @click.prevent="_onClickToDoButton">
           <span class="button-a__emoji">🐈</span>
         </button>
+        <button class="button-a mr8" @click.prevent="_onClickStripeButton">
+          <span class="button-a__emoji">💰</span>
+        </button>
         <a
           href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
           target="_blank"
@@ -144,13 +147,18 @@ export default defineComponent({
       state.shouldShowToDoModal = false
     }
 
+    const _onClickStripeButton = () => {
+      location.replace('https://buy.stripe.com/8wM8Addc9e6N9JSaEE')
+    }
+
     return {
       state,
       _onClickSubmitButton,
       _onClickToDoButton,
       _onClickToDoClose,
       _onClickSettingButton,
-      _onClickClose
+      _onClickClose,
+      _onClickStripeButton
     }
   }
 })
