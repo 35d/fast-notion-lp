@@ -7,5 +7,5 @@ export const getToken = () => {
 }
 
 export const getIsDbMode = (): boolean => {
-  return window.localStorage.getItem('fast_notion_token') === 'true'
+  return window.localStorage.getItem('fast_notion_is_db_mode') === 'true'
 }
