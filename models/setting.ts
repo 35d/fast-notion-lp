@@ -5,3 +5,7 @@ export const getUrl = () => {
 export const getToken = () => {
   return window.localStorage.getItem('fast_notion_token')
 }
+
+export const getIsDbMode = (): boolean => {
+  return window.localStorage.getItem('fast_notion_token') === 'true'
+}

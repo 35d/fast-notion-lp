@@ -10,14 +10,20 @@
           placeholder="INPUT YOUR TOKEN"
         />
       </label>
-      <label class="mb24">
+      <label class="mb8">
         <p class="label__text">URL</p>
-        <input
-          v-model="state.settingForm.url"
-          class="wf"
-          type="text"
-          placeholder="INPUT YOUR TOKEN"
-        />
+        <div class="df">
+          <input
+            v-model="state.settingForm.url"
+            class="wf"
+            type="text"
+            placeholder="INPUT YOUR TOKEN"
+          />
+        </div>
+      </label>
+      <label class="mb24 df">
+        <p class="label__text lh40 mr4">DB Mode</p>
+        <input v-model="state.settingForm.isDbMode" type="checkbox" />
       </label>
       <div class="df jcc">
         <button @click.prevent="_onClickSubmitButton">SAVE</button>
@@ -33,10 +39,12 @@ import {
   PropType,
   reactive
 } from '@nuxtjs/composition-api'
+import { getIsDbMode } from '~/models/setting'
 
 interface SettingForm {
   url: string
   token: string
+  isDbMode: boolean
 }
 
 interface State {
@@ -54,7 +62,8 @@ export default defineComponent({
     const state = reactive<State>({
       settingForm: {
         url: '',
-        token: ''
+        token: '',
+        isDbMode: false
       }
     })
 
@@ -65,14 +74,20 @@ export default defineComponent({
     const retrive = () => {
       const url = window.localStorage.getItem('fast_notion_url')
       const token = window.localStorage.getItem('fast_notion_token')
+      const isDbMode = getIsDbMode()
 
       if (url) state.settingForm.url = url
       if (token) state.settingForm.token = token
+      if (isDbMode) state.settingForm.isDbMode = isDbMode
     }
 
     const _onClickSubmitButton = () => {
       window.localStorage.setItem('fast_notion_token', state.settingForm.token)
       window.localStorage.setItem('fast_notion_url', state.settingForm.url)
+      window.localStorage.setItem(
+        'fast_notion_is_db_mode',
+        String(state.settingForm.isDbMode)
+      )
       props.onClose()
     }
 

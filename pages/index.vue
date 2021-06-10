@@ -74,11 +74,12 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
-import SettingSection from '@/components/container/playground/SettingSection.vue'
-import ToDoSection from '@/components/container/playground/ToDoSection.vue'
+import SettingSection from '@/components/container/top/SettingSection.vue'
+import ToDoSection from '@/components/container/top/ToDoSection.vue'
 import { Modal } from '@/components/presentational/atoms'
-import { ADD_URL } from '@/config'
+import { ADD_DB_URL, ADD_URL } from '@/config'
 import { buildMemoPostReqBody, MemoPostForm } from '@/models/memo'
+import { getIsDbMode } from '~/models/setting'
 
 const STATUSES = ['', 'SENDING', 'SUCCESS', 'FAILED'] as const
 export type Status = typeof STATUSES[number]
@@ -108,9 +109,11 @@ export default defineComponent({
 
     const _onClickSubmitButton = () => {
       state.status = 'SENDING'
+      const isDbMode = getIsDbMode()
+      const url = isDbMode ? ADD_DB_URL : ADD_URL
 
       root.$axios
-        .post(ADD_URL, buildMemoPostReqBody(state.postForm.text))
+        .post(url, buildMemoPostReqBody(state.postForm.text))
         .then(() => {
           state.status = 'SUCCESS'
           state.postForm.text = ''
