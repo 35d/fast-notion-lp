@@ -1,7 +1,7 @@
 {
   "name": "fast-notion-lp",
   "version": "1.0.0",
-  "description": "My exceptional Nuxt.js project",
+  "description": "Quick memo tool for Notion",
   "author": "35d",
   "private": true,
   "scripts": {
