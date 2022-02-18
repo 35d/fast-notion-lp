@@ -1,7 +1,9 @@
 <template>
   <div>
-    <nuxt-link to="contact">問い合わせ</nuxt-link>
+    <nuxt-link to="/">トップ</nuxt-link>
+    <p>AAA</p>
     {{ path }}
+    {{ route }}
   </div>
 </template>
 

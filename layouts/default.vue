@@ -1,13 +1,10 @@
 <template>
-  <div>
-    <PortalTarget name="global-modal" class="l-modal"> </PortalTarget>
-    <nuxt />
+  <div class="flex flex-col min-h-screen">
+    <PresentationalHeader />
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <PresentationalFooter />
   </div>
 </template>
-
-<style>
-.l-modal {
-  z-index: 100;
-  position: relative;
-}
-</style>
