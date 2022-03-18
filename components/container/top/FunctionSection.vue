@@ -80,14 +80,18 @@
           <img
             src="~@/assets/img/top/evaluation.png"
             alt=""
-            class="px-6 mb-4"
+            class="px-6 mb-4 h-auto"
           />
           <p class="text-black1 text-sm font-bold">App Store評価</p>
         </div>
         <div
           class="bg-white h-44 flex flex-col items-center justify-center w-1/2 shadow-3xl rounded"
         >
-          <img src="~@/assets/img/top/download.png" alt="" class="px-4 mb-4" />
+          <img
+            src="~@/assets/img/top/download.png"
+            alt=""
+            class="px-4 mb-4 h-auto"
+          />
           <p class="text-black1 text-sm font-bold">累計ダウンロード数</p>
         </div>
       </div>
