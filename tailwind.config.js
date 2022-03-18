@@ -22,6 +22,10 @@ module.exports = {
         "3xl":
           "0px 20px 46px rgba(0, 0, 0, 0.12), 0px 4px 16px rgba(0, 0, 0, 0.04)",
       },
+      backgroundImage: {
+        "grad-text":
+          "linear-gradient(220.58deg, #0E3552 23.07%, #7C9BAD 105.09%)",
+      },
     },
   },
   variants: {

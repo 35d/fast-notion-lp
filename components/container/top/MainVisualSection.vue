@@ -1,6 +1,18 @@
 <template>
   <div class="relative">
     <img src="~@/assets/img/top/mv-sp.jpg" alt="" />
+    <div class="absolute top-32 left-9 flex flex-col">
+      <div
+        class="flex justify-center items-center rounded-full border border-white w-24 h-24 bg-white/10 mb-4"
+      >
+        <img src="~@/assets/img/top/mv-evaluation.svg" alt="" />
+      </div>
+      <div
+        class="flex justify-center items-center rounded-full border border-white w-24 h-24 bg-white/10"
+      >
+        <img src="~@/assets/img/top/mv-download.svg" alt="" />
+      </div>
+    </div>
     <div class="absolute bottom-0 w-full">
       <div class="mx-9">
         <img src="~@/assets/img/top/title.svg" alt="" />
