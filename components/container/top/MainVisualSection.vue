@@ -11,11 +11,11 @@
       </div>
       <div class="bg-white w-full h-28 flex justify-center items-center">
         <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
-          ><img src="~@/assets/img/parts/download-ios.png" alt=""
+          ><img src="~@/assets/img/parts/download-ios.svg" alt=""
         /></a>
         <a
           href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"
-          ><img src="~@/assets/img/parts/download-android.png" alt=""
+          ><img src="~@/assets/img/parts/download-android.svg" alt=""
         /></a>
       </div>
     </div>

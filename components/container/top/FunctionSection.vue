@@ -29,7 +29,7 @@
           <p class="text-sm font-medium text-black1 mb-4">
             データベースに直接テキストメモを送信
           </p>
-          <img src="~@/assets/img/top/function-database.png" alt="" />
+          <img src="~@/assets/img/top/function-database.svg" alt="" />
         </div>
       </div>
       <div class="flex flex-col mx-6 mb-8">
@@ -40,7 +40,7 @@
           <p class="text-sm font-medium text-black1 mb-4">
             Notion上の好きなページを指定して、メモを投稿
           </p>
-          <img src="~@/assets/img/top/function-multi.png" alt="" />
+          <img src="~@/assets/img/top/function-multi.svg" alt="" />
         </div>
       </div>
       <div class="flex flex-col mx-6 mb-8">
@@ -51,7 +51,7 @@
           <p class="text-sm font-medium text-black1 mb-4">
             思いついたタスクを即時に追加
           </p>
-          <img src="~@/assets/img/top/function-todo.png" alt="" />
+          <img src="~@/assets/img/top/function-todo.svg" alt="" />
         </div>
       </div>
       <div class="flex flex-col mx-6 mb-8">
@@ -62,7 +62,7 @@
           <p class="text-sm font-medium text-black1 mb-4">
             視覚的に読みやすい画面に変更可能
           </p>
-          <img src="~@/assets/img/top/function-dark.png" alt="" />
+          <img src="~@/assets/img/top/function-dark.svg" alt="" />
         </div>
       </div>
     </div>
@@ -93,11 +93,11 @@
       </div>
       <div class="w-full h-16 flex justify-center items-center">
         <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
-          ><img src="~@/assets/img/parts/download-ios.png" alt=""
+          ><img src="~@/assets/img/parts/download-ios.svg" alt=""
         /></a>
         <a
           href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"
-          ><img src="~@/assets/img/parts/download-android.png" alt=""
+          ><img src="~@/assets/img/parts/download-android.svg" alt=""
         /></a>
       </div>
     </div>
