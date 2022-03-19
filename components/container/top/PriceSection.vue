@@ -1,15 +1,13 @@
 <template>
   <div>
-    <div class="flex flex-col my-16 mx-6 md:flex-row">
-      <h2 class="font-bold text-2xl text-center text-black1 mb-4 md:text-left">
-        料金
-      </h2>
+    <div class="flex flex-col my-16 mx-6">
+      <h2 class="font-bold text-2xl text-center text-black1 mb-4">料金</h2>
       <p
-        class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text md:text-left"
+        class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text"
       >
         PLAN
       </p>
-      <table>
+      <table class="md:w-4/5 md:max-w-3xl md:mx-auto">
         <thead>
           <tr>
             <th></th>
@@ -40,7 +38,7 @@
               <td width="42%" class="p-4">
                 <p
                   v-html="plan.title"
-                  class="text-primary font-medium text-xs"
+                  class="text-primary font-medium text-xs md:text-sm"
                 ></p>
               </td>
               <td width="28%" height="48px" class="p-0">

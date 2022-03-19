@@ -1,6 +1,7 @@
 <template>
-  <div class="relative">
-    <img src="~@/assets/img/top/mv-sp.jpg" alt="" />
+  <div class="relative bg-[url('static/img/top/mv-bg.jpg')]">
+    <img src="~@/assets/img/top/mv-sp.jpg" alt="" class="md:hidden" />
+    <img src="~@/assets/img/top/mv-pc.jpg" alt="" class="hidden md:block" />
     <div class="absolute top-32 left-9 flex flex-col">
       <div
         class="flex justify-center items-center rounded-full border border-white w-24 h-24 bg-white/10 mb-4"
@@ -21,7 +22,9 @@
         </h1>
         <p class="text-gray2 text-xs mb-16">※2022年2月時点、650件の評価。</p>
       </div>
-      <div class="bg-white w-full h-28 flex justify-center items-center">
+      <div
+        class="bg-white w-full h-28 flex justify-center items-center md:bg-transparent"
+      >
         <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
           ><img src="~@/assets/img/parts/download-ios.svg" alt=""
         /></a>
