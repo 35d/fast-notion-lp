@@ -17,6 +17,9 @@ module.exports = {
         gray2: "#6A6E78",
         blue1: "#0E3552",
         blue2: "#7C9BAD",
+        beige1: "#fbfbfb",
+        primary: "#0e3652",
+        light_gray: "#dbdde1",
       },
       boxShadow: {
         "3xl":

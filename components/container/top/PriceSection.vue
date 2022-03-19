@@ -9,31 +9,131 @@
       >
         PLAN
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th class="p-0">
+              <div
+                class="bg-primary mx-1 h-20 flex flex-col items-center justify-center rounded-t border border-primary"
+              >
+                <p class="text-white text-xs font-medium mb-1">通常</p>
+                <p class="text-beige1 text-base font-bold">無料</p>
+              </div>
+            </th>
+            <th class="p-0">
+              <div
+                class="bg-primary mx-1 h-20 flex flex-col items-center justify-center rounded-t border border-primary"
+              >
+                <p class="text-beige1 text-xs font-medium">プロ</p>
+                <p class="text-beige1 text-xs font-medium">
+                  月額 <span class="text-base font-bold">200</span>円
+                </p>
+                <p class="text-light_gray text-xs font-medium">年間 2,000円</p>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <template v-for="plan in plans" :key="index">
+            <tr>
+              <td width="42%" class="p-4">
+                <p
+                  v-html="plan.title"
+                  class="text-primary font-medium text-xs"
+                ></p>
+              </td>
+              <td width="28%" height="48px" class="p-0">
+                <div
+                  :class="[
+                    'mx-1 h-full bg-beige1 border-x border-primary flex justify-center items-center',
+                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
+                  ]"
+                >
+                  <p class="text-primary font-medium text-sm text-center">
+                    {{ plan.col1Text }}
+                  </p>
+                  <img :src="plan.col1ImgPath" />
+                </div>
+              </td>
+              <td width="28%" height="48px" class="p-0">
+                <div
+                  :class="[
+                    'mx-1 h-full bg-beige1 border-x border-primary flex justify-center items-center',
+                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
+                  ]"
+                >
+                  <p class="text-primary font-medium text-sm text-center">
+                    {{ plan.col2Text }}
+                  </p>
+                  <img :src="plan.col2ImgPath" />
+                </div>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const candos = [
+const plans = [
   {
-    title: "データベース接続",
-    content: "データベースに直接テキストメモを送信",
-    imgPath: "/_nuxt/assets/img/top/function-database.png",
+    title: "日本語対応",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
   },
   {
-    title: "複数ページの指定",
-    content: "Notion上の好きなページを指定して、メモを投稿",
-    imgPath: "/_nuxt/assets/img/top/function-multi.png",
+    title: "ダークモード",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
   },
   {
-    title: "To Do モード対応",
-    content: "思いついたタスクを即時に追加",
-    imgPath: "/_nuxt/assets/img/top/function-todo.png",
+    title: "広告の表示",
+    col1Text: "表示",
+    col1ImgPath: "",
+    col2Text: "非表示",
+    col2ImgPath: "",
   },
   {
-    title: "ダークモード対応",
-    content: "視覚的に読みやすい画面に変更可能",
-    imgPath: "/_nuxt/assets/img/top/function-dark.png",
+    title: "メモの投稿",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
+  },
+  {
+    title: "ToDo 投稿モード",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
+  },
+  {
+    title: "履歴の保存<br>上限100件",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ng.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
+  },
+  {
+    title: "データベース投稿モード",
+    col1Text: "",
+    col1ImgPath: "/static/img/top/plan-ng.svg",
+    col2Text: "",
+    col2ImgPath: "/static/img/top/plan-ok.svg",
+  },
+  {
+    title: "URL 登録数の上限",
+    col1Text: "2",
+    col1ImgPath: "",
+    col2Text: "無制限",
+    col2ImgPath: "",
   },
 ];
 </script>
