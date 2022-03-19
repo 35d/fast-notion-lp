@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="-mt-16 md:-mt-20">
     <MainVisualSection />
     <FunctionSection />
     <PriceSection />
     <DownloadSection />
-    <!-- <nuxt-link to="contact">問い合わせ{{ path }}</nuxt-link> -->
   </div>
 </template>
 

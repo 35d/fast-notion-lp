@@ -12,7 +12,7 @@
       </template>
     </div>
     <div class="hidden md:flex md:justify-center md:mb-16">
-      <img src="~@/assets/img/parts/fast-notion.svg" alt="" />
+      <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" />
     </div>
     <div class="w-full md:bg-beige1 py-6">
       <div class="flex justify-center md:justify-start md:mx-auto md:max-w-3xl">

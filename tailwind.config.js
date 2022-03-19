@@ -25,9 +25,21 @@ module.exports = {
         "3xl":
           "0px 20px 46px rgba(0, 0, 0, 0.12), 0px 4px 16px rgba(0, 0, 0, 0.04)",
       },
+      borderRadius: {
+        "header-70": "70px",
+      },
       backgroundImage: {
         "grad-text":
           "linear-gradient(220.58deg, #0E3552 23.07%, #7C9BAD 105.09%)",
+      },
+      keyframes: {
+        slideDown: {
+          "0%": { top: "-56px" },
+          "100%": { top: "0" },
+        },
+      },
+      animation: {
+        slide: "slideDown 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
       },
     },
   },
