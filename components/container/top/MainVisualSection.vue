@@ -1,5 +1,5 @@
 <template>
-  <div class="relative bg-[url('static/img/top/mv-bg.jpg')]">
+  <div class="relative bg-[url('~/assets/img/top/mv-bg.jpg')]">
     <img src="~@/assets/img/top/mv-sp.jpg" alt="" class="md:hidden" />
     <img
       src="~@/assets/img/top/mv-pc.jpg"
