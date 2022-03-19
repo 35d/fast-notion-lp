@@ -10,7 +10,7 @@
           Fast Notionでできること
         </h2>
         <p
-          class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text md:text-left"
+          class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text md:text-left md:text-sm"
         >
           FUNCTION
         </p>
@@ -28,7 +28,7 @@
     </h3>
     <div class="mb-8 md:flex md:flex-wrap md:w-4/5 md:mx-auto md:max-w-4xl">
       <template v-for="cando in candos" :key="index">
-        <div class="flex flex-col px-6 pb-8 md:w-1/2">
+        <div class="flex flex-col px-6 pb-8 md:w-1/2 md:px-4">
           <div class="flex flex-col items-center shadow-3xl rounded">
             <p class="text-base font-bold text-black1 mb-1 mt-10">
               {{ cando.title }}
@@ -57,17 +57,19 @@
           >
             4.6
           </p>
-          <p class="text-black1 text-sm font-bold text-center">App Store評価</p>
+          <p class="text-black1 text-sm font-bold text-center md:text-base">
+            App Store評価
+          </p>
         </div>
         <div
           class="bg-white py-10 px-4 w-1/2 shadow-3xl rounded flex flex-col justify-center"
         >
           <p
-            class="font-[Futura] text-4xl font-medium text-transparent bg-clip-text bg-grad-text text-center mb-4"
+            class="font-[Futura] text-4xl font-medium text-transparent bg-clip-text bg-grad-text text-center mb-4 md:text-6xl"
           >
             30,000
           </p>
-          <p class="text-black1 text-sm font-bold text-center">
+          <p class="text-black1 text-sm font-bold text-center md:text-base">
             累計ダウンロード数
           </p>
         </div>

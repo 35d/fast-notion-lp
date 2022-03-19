@@ -3,7 +3,7 @@
     <div class="flex flex-col my-16 mx-6">
       <h2 class="font-bold text-2xl text-center text-black1 mb-4">料金</h2>
       <p
-        class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text"
+        class="text-xs font-bold tracking-wider text-center mb-8 text-transparent bg-clip-text bg-grad-text md:text-sm"
       >
         PLAN
       </p>
@@ -35,13 +35,13 @@
         <tbody>
           <template v-for="plan in plans" :key="index">
             <tr>
-              <td width="42%" class="p-4">
+              <td class="p-4 w-[42%] md:w-[30%]">
                 <p
                   v-html="plan.title"
                   class="text-primary font-medium text-xs md:text-sm"
                 ></p>
               </td>
-              <td width="28%" height="48px" class="p-0">
+              <td height="48px" class="p-0 w-[28%] md:w-[35%]">
                 <div
                   :class="[
                     'mx-1 h-full bg-beige1 border-x border-primary flex justify-center items-center',
@@ -54,7 +54,7 @@
                   <img :src="plan.col1ImgPath" />
                 </div>
               </td>
-              <td width="28%" height="48px" class="p-0">
+              <td height="48px" class="p-0 w-[28%] md:w-[35%]">
                 <div
                   :class="[
                     'mx-1 h-full bg-beige1 border-x border-primary flex justify-center items-center',
@@ -80,16 +80,16 @@ const plans = [
   {
     title: "日本語対応",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col1ImgPath: "/assets/img/parts/plan-ok.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "ダークモード",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col1ImgPath: "/assets/img/parts/plan-ok.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "広告の表示",
@@ -101,30 +101,30 @@ const plans = [
   {
     title: "メモの投稿",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col1ImgPath: "/assets/img/parts/plan-ok.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "ToDo 投稿モード",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ok.svg",
+    col1ImgPath: "/assets/img/parts/plan-ok.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "履歴の保存<br>上限100件",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ng.svg",
+    col1ImgPath: "/assets/img/parts/plan-ng.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "データベース投稿モード",
     col1Text: "",
-    col1ImgPath: "/static/img/top/plan-ng.svg",
+    col1ImgPath: "/assets/img/parts/plan-ng.svg",
     col2Text: "",
-    col2ImgPath: "/static/img/top/plan-ok.svg",
+    col2ImgPath: "/assets/img/parts/plan-ok.svg",
   },
   {
     title: "URL 登録数の上限",
