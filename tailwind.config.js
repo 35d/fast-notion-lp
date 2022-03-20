@@ -37,9 +37,14 @@ module.exports = {
           "0%": { top: "-56px" },
           "100%": { top: "0" },
         },
+        slideIn: {
+          "0%": { right: "-100px" },
+          "100%": { right: "0" },
+        },
       },
       animation: {
-        slide: "slideDown 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
+        slide_down: "slideDown 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
+        slide_bar: "slideIn 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
       },
     },
   },
