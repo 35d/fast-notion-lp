@@ -22,26 +22,78 @@
           { 'block w-36 h-auto pl-8': shouldShowHeader },
         ]"
       />
-      <div class="hidden md:flex md:gap-8">
-        <nuxt-link to="/" class="text-white text-sm font-bold"
-          >使い方</nuxt-link
-        >
-        <nuxt-link to="/" class="text-white text-sm font-bold"
-          >リリースノート</nuxt-link
-        >
-        <nuxt-link to="/" class="text-white text-sm font-bold"
-          >よくある質問</nuxt-link
-        >
-        <nuxt-link to="/" class="text-white text-sm font-bold"
-          >お問い合わせ</nuxt-link
-        >
+      <div :class="['hidden md:flex md:gap-8', { 'pr-8': shouldShowHeader }]">
+        <template v-for="content in headerList" :key="index">
+          <nuxt-link
+            :to="content.path"
+            :class="[
+              'text-sm font-bold',
+              { 'text-white': !shouldShowHeader },
+              { 'text-black1': shouldShowHeader },
+            ]"
+            >{{ content.title }}</nuxt-link
+          >
+        </template>
       </div>
-      <div class="md:hidden"><p>menu</p></div>
+      <div
+        :class="['md:hidden', { 'pr-8': shouldShowHeader }]"
+        @click="onClickMenu"
+      >
+        <div id="burger">
+          <button class="h-8 w-9 block relative">
+            <div
+              :class="[
+                'bg-white h-0.5 w-9 z-20 transition-all duration-500 absolute',
+                { 'top-1': !isPanelOpen },
+                { 'bg-black1 top-4 w-8 rotate-45': isPanelOpen },
+                { 'bg-black1': shouldShowHeader },
+              ]"
+            ></div>
+            <div
+              :class="[
+                'bg-white h-0.5 w-9 z-20 transition-all duration-500 absolute ',
+                { 'top-3': !isPanelOpen },
+                { 'bg-black1 w-8 -rotate-45 top-4': isPanelOpen },
+                { 'bg-black1': shouldShowHeader },
+              ]"
+            ></div>
+            <p
+              :class="[
+                'text-xs absolute top-4 text-center transition-all duration-500',
+                { 'text-white': !shouldShowHeader },
+                { 'text-black1': shouldShowHeader },
+              ]"
+            >
+              MENU
+            </p>
+          </button>
+        </div>
+      </div>
     </div>
+    <transition name="slide">
+      <div
+        @click="onClickMenu"
+        v-if="isPanelOpen"
+        class="w-full h-full bg-white fixed top-0 right-0 z-10 transition-all duration-500"
+      >
+        <div class="flex">
+          <img
+            src="~@/assets/img/parts/fast-notion-black.svg"
+            alt=""
+            class="w-36"
+          />
+        </div>
+      </div>
+    </transition>
   </header>
 </template>
 <script setup lang="ts">
+const isPanelOpen = ref<boolean>(false);
 const shouldShowHeader = ref<boolean>(false);
+const onClickMenu = () => {
+  isPanelOpen.value = !isPanelOpen.value;
+  console.log(isPanelOpen.value);
+};
 const registerHeaderAnimationEvent = () => {
   if (!process.client) return;
   window.addEventListener("scroll", () => {
@@ -56,4 +108,10 @@ const registerHeaderAnimationEvent = () => {
 onMounted(() => {
   registerHeaderAnimationEvent();
 });
+const headerList = [
+  { title: "使い方", path: "/" },
+  { title: "リリースノート", path: "/" },
+  { title: "よくある質問", path: "/" },
+  { title: "お問い合わせ", path: "/" },
+];
 </script>
