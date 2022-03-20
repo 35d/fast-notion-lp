@@ -16,8 +16,10 @@
     </div>
     <div class="w-full md:bg-beige1 py-6">
       <div class="flex justify-center md:justify-start md:mx-auto md:max-w-3xl">
-        <a class="text-gray2 text-xs mr-4 md:mr-6">プライバシーポリシー</a>
-        <a class="text-gray2 text-xs">利用規約</a>
+        <a href="" class="text-gray2 text-xs mr-4 md:mr-6"
+          >プライバシーポリシー</a
+        >
+        <a href="" class="text-gray2 text-xs">利用規約</a>
       </div>
     </div>
   </footer>

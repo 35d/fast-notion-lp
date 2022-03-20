@@ -4,7 +4,6 @@
       class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl"
     >
       <img src="~@/assets/img/parts/fast-notion-white.svg" alt="" />
-
       <div class="hidden md:flex md:gap-8">
         <template v-for="content in headerList" :key="index">
           <nuxt-link :to="content.path" class="text-sm font-bold text-white">{{
@@ -13,29 +12,11 @@
         </template>
       </div>
       <div class="md:hidden" @click="onClickMenu">
-        <div id="burger">
-          <button class="h-8 w-9 block relative">
-            <div
-              :class="[
-                'bg-white h-0.5 w-9 z-20 transition-all duration-500 absolute',
-                { 'top-1': !isPanelOpen },
-                { 'bg-black1 top-4 w-8 rotate-45': isPanelOpen },
-              ]"
-            ></div>
-            <div
-              :class="[
-                'bg-white h-0.5 w-9 z-20 transition-all duration-500 absolute ',
-                { 'top-3': !isPanelOpen },
-                { 'bg-black1 w-8 -rotate-45 top-4': isPanelOpen },
-              ]"
-            ></div>
-            <p
-              class="text-xs absolute top-4 text-center transition-all duration-500 text-white"
-            >
-              MENU
-            </p>
-          </button>
-        </div>
+        <button class="h-8 w-9 block relative">
+          <div class="bg-white h-0.5 w-9 absolute top-1"></div>
+          <div class="bg-white h-0.5 w-9 absolute top-3"></div>
+          <p class="text-xs absolute top-4 text-center text-white">MENU</p>
+        </button>
       </div>
     </div>
     <div
@@ -55,42 +36,42 @@
         </template>
       </div>
       <div class="md:hidden pr-8" @click="onClickMenu">
-        <div id="burger">
-          <button class="h-8 w-9 block relative">
-            <div
-              :class="[
-                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute',
-                { 'top-1': !isPanelOpen },
-                { 'top-4 w-8 rotate-45': isPanelOpen },
-              ]"
-            ></div>
-            <div
-              :class="[
-                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute ',
-                { 'top-3': !isPanelOpen },
-                { 'w-8 -rotate-45 top-4': isPanelOpen },
-              ]"
-            ></div>
-            <p
-              class="text-xs absolute top-4 text-center transition-all duration-500 text-black1"
-            >
-              MENU
-            </p>
-          </button>
-        </div>
+        <button class="h-8 w-9 block relative">
+          <div class="bg-black1 h-0.5 w-9 absolute top-1"></div>
+          <div class="bg-black1 h-0.5 w-9 absolute top-3"></div>
+          <p class="text-xs absolute top-4 text-center text-black1">MENU</p>
+        </button>
       </div>
     </div>
     <div
-      @click="onClickMenu"
-      v-if="isPanelOpen"
-      class="w-full h-full bg-white fixed top-0 left-0 z-10 transition-transform duration-500 translate-x-0"
+      :class="[
+        'w-full h-full bg-white fixed top-0 z-10 transition-all',
+        { 'left-0': isPanelOpen },
+        { 'left-full': !isPanelOpen },
+      ]"
     >
-      <div class="pt-8 pl-6 mb-16">
+      <div class="pt-8 px-6 mb-16 flex justify-between">
         <img
           src="~@/assets/img/parts/fast-notion-black.svg"
           alt=""
           class="w-36"
         />
+        <div class="md:hidden" @click="onClickMenu">
+          <button class="h-8 w-9 block relative">
+            <div
+              :class="[
+                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute',
+                { 'top-4 w-8 rotate-45': isPanelOpen },
+              ]"
+            ></div>
+            <div
+              :class="[
+                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute',
+                { ' w-8 -rotate-45 top-4': isPanelOpen },
+              ]"
+            ></div>
+          </button>
+        </div>
       </div>
       <template v-for="content in headerList" :key="index">
         <div class="p-4 mx-6 mb-3">
