@@ -32,20 +32,6 @@ module.exports = {
         "grad-text":
           "linear-gradient(220.58deg, #0E3552 23.07%, #7C9BAD 105.09%)",
       },
-      keyframes: {
-        slideDown: {
-          "0%": { top: "-56px" },
-          "100%": { top: "0" },
-        },
-        slideIn: {
-          "0%": { right: "-100px" },
-          "100%": { right: "0" },
-        },
-      },
-      animation: {
-        slide_down: "slideDown 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
-        slide_bar: "slideIn 0.3s cubic-bezier(0.43, 0.05, 0.17, 1)",
-      },
     },
   },
   variants: {

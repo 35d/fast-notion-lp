@@ -53,7 +53,7 @@
           class="bg-white py-10 px-6 w-1/2 shadow-3xl rounded flex flex-col justify-center"
         >
           <p
-            class="font-[Futura] text-[64px] font-medium text-transparent bg-clip-text bg-grad-text text-center relative after:absolute after:top-4 after:content-['※'] after:text-xs after:text-black1 after:font-sans after:sm:right-1/4 after:md:right-1/4 after:lg:right-1/3"
+            class="font-[Futura] text-[64px] font-medium text-transparent bg-clip-text bg-grad-text text-center relative after:absolute after:top-4 after:content-['※'] after:text-xs after:text-black1 after:font-sans after:-right-1 after:md:right-1/4 after:lg:right-1/3"
           >
             4.6
           </p>

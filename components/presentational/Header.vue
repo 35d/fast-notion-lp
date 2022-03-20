@@ -19,9 +19,13 @@
         </button>
       </div>
     </div>
+    <!-- ナビゲーション -->
     <div
-      class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl transition-all duration-500 rounded-header-70 fixed bg-white animate-slide_down shadow-3xl"
-      v-show="shouldShowHeader"
+      :class="[
+        'h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl transition-all duration-500 rounded-header-70 fixed bg-white shadow-3xl',
+        { 'top-0': shouldShowHeader },
+        { '-top-20': !shouldShowHeader },
+      ]"
     >
       <img
         src="~@/assets/img/parts/fast-notion-black.svg"
@@ -43,9 +47,10 @@
         </button>
       </div>
     </div>
+    <!-- サイドバー -->
     <div
       :class="[
-        'w-full h-full bg-white fixed top-0 z-10 transition-all',
+        'w-full h-full bg-white fixed top-0 z-10 transition-all duration-500',
         { 'left-0': isPanelOpen },
         { 'left-full': !isPanelOpen },
       ]"
@@ -59,16 +64,10 @@
         <div class="md:hidden" @click="onClickMenu">
           <button class="h-8 w-9 block relative">
             <div
-              :class="[
-                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute',
-                { 'top-4 w-8 rotate-45': isPanelOpen },
-              ]"
+              class="bg-black1 h-0.5 w-8 z-20 absolute top-4 rotate-45"
             ></div>
             <div
-              :class="[
-                'bg-black1 h-0.5 w-9 z-20 transition-all duration-500 absolute',
-                { ' w-8 -rotate-45 top-4': isPanelOpen },
-              ]"
+              class="bg-black1 h-0.5 w-8 z-20 absolute -rotate-45 top-4"
             ></div>
           </button>
         </div>
@@ -97,7 +96,6 @@ const isPanelOpen = ref<boolean>(false);
 const shouldShowHeader = ref<boolean>(false);
 const onClickMenu = () => {
   isPanelOpen.value = !isPanelOpen.value;
-  console.log(isPanelOpen.value);
 };
 const registerHeaderAnimationEvent = () => {
   if (!process.client) return;
@@ -105,7 +103,7 @@ const registerHeaderAnimationEvent = () => {
     if ((document.documentElement.scrollTop || 0) > 500) {
       shouldShowHeader.value = true;
     }
-    if (document.documentElement.scrollTop === 0) {
+    if (document.documentElement.scrollTop < 80) {
       shouldShowHeader.value = false;
     }
   });
