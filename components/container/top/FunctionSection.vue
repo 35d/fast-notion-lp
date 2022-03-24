@@ -97,17 +97,17 @@ const candos = [
   {
     title: "複数ページの指定",
     content: "Notion上の好きなページを指定して、メモを投稿",
-    imgPath: "/static/img/function-multi.png",
+    imgPath: "static/img/function-multi.png",
   },
   {
     title: "To Do モード対応",
     content: "思いついたタスクを即時に追加",
-    imgPath: "/static/img/function-todo.png",
+    imgPath: "/img/function-todo.png",
   },
   {
     title: "ダークモード対応",
     content: "視覚的に読みやすい画面に変更可能",
-    imgPath: "/static/img/function-dark.png",
+    imgPath: "img/function-dark.png",
   },
 ];
 </script>
