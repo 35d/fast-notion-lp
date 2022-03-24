@@ -92,12 +92,12 @@ const candos = [
   {
     title: "データベース接続",
     content: "データベースに直接テキストメモを送信",
-    imgPath: "/static/img/function-database.png",
+    imgPath: "/img/function-database.png",
   },
   {
     title: "複数ページの指定",
     content: "Notion上の好きなページを指定して、メモを投稿",
-    imgPath: "static/img/function-multi.png",
+    imgPath: "/img/function-multi.png",
   },
   {
     title: "To Do モード対応",
@@ -107,7 +107,7 @@ const candos = [
   {
     title: "ダークモード対応",
     content: "視覚的に読みやすい画面に変更可能",
-    imgPath: "img/function-dark.png",
+    imgPath: "/img/function-dark.png",
   },
 ];
 </script>
