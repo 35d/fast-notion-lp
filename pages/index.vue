@@ -1,5 +1,5 @@
 <template>
-  <div class="-mt-16 md:-mt-20">
+  <div>
     <MainVisualSection />
     <FunctionSection />
     <PriceSection />

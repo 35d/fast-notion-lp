@@ -10,14 +10,23 @@
           }}</nuxt-link>
         </div>
       </template>
+      <div class="p-4">
+        <a
+          href="https://blog.35d.jp/tags/Fast%20Notion"
+          class="text-black1 font-bold text-sm"
+          >開発ブログ</a
+        >
+      </div>
     </div>
     <div class="hidden md:flex md:justify-center md:mb-16">
-      <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" />
+      <nuxt-link to="/">
+        <img src="~@/assets/img/parts/fast-notion-black.svg" alt=""
+      /></nuxt-link>
     </div>
     <div class="w-full md:bg-beige1 py-6">
       <div class="flex justify-center md:justify-start md:mx-auto md:max-w-3xl">
-        <a href="" class="text-gray2 text-xs mr-4 md:mr-6"
-          >プライバシーポリシー</a
+        <nuxt-link to="/privacy" class="text-gray2 text-xs mr-4 md:mr-6"
+          >プライバシーポリシー</nuxt-link
         >
         <a href="" class="text-gray2 text-xs">利用規約</a>
       </div>
@@ -32,19 +41,15 @@ const contents = [
   },
   {
     title: "リリースノート",
-    path: "/",
+    path: "/releases",
   },
   {
     title: "ユーザーコミュニティ",
-    path: "/",
+    path: "/user-community",
   },
   {
     title: "よくある質問",
-    path: "/",
-  },
-  {
-    title: "開発ブログ",
-    path: "/",
+    path: "/faq",
   },
   {
     title: "お問い合わせ",

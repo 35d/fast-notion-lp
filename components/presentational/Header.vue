@@ -3,7 +3,9 @@
     <div
       class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl"
     >
-      <img src="~@/assets/img/parts/fast-notion-white.svg" alt="" />
+      <nuxt-link to="/">
+        <img src="~@/assets/img/parts/fast-notion-white.svg" alt=""
+      /></nuxt-link>
       <div class="hidden md:flex md:gap-8">
         <template v-for="content in headerList" :key="index">
           <nuxt-link :to="content.path" class="text-sm font-bold text-white">{{
@@ -27,11 +29,12 @@
         { '-top-20': !shouldShowHeader },
       ]"
     >
-      <img
-        src="~@/assets/img/parts/fast-notion-black.svg"
-        alt=""
-        class="block w-36 h-auto pl-8"
-      />
+      <nuxt-link to="/">
+        <img
+          src="~@/assets/img/parts/fast-notion-black.svg"
+          alt=""
+          class="block w-36 h-auto pl-8"
+      /></nuxt-link>
       <div class="hidden md:flex md:gap-8 pr-8">
         <template v-for="content in headerList" :key="index">
           <nuxt-link :to="content.path" class="text-sm font-bold text-black1">{{
@@ -74,9 +77,12 @@
       </div>
       <template v-for="content in headerList" :key="index">
         <div class="p-4 mx-6 mb-3">
-          <nuxt-link :to="content.path" class="text-sm text-black1 font-bold">{{
-            content.title
-          }}</nuxt-link>
+          <p
+            @click="jumpToPath(content.path)"
+            class="text-sm text-black1 font-bold"
+          >
+            {{ content.title }}
+          </p>
         </div>
       </template>
       <div class="w-full flex justify-center items-center px-10 mt-8">
@@ -92,6 +98,7 @@
   </header>
 </template>
 <script setup lang="ts">
+const router = useRouter();
 const isPanelOpen = ref<boolean>(false);
 const shouldShowHeader = ref<boolean>(false);
 const onClickMenu = () => {
@@ -113,8 +120,12 @@ onMounted(() => {
 });
 const headerList = [
   { title: "使い方", path: "/" },
-  { title: "リリースノート", path: "/" },
-  { title: "よくある質問", path: "/" },
-  { title: "お問い合わせ", path: "/" },
+  { title: "リリースノート", path: "/releases" },
+  { title: "よくある質問", path: "/faq" },
+  { title: "お問い合わせ", path: "/contact" },
 ];
+const jumpToPath = (path: string) => {
+  isPanelOpen.value = !isPanelOpen.value;
+  router.push(path);
+};
 </script>
