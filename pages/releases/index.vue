@@ -1,17 +1,23 @@
 <template>
   <div class="px-6 py-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-xl mx-auto space-y-8">
-      <h1 class="text-xl mb-4">リリースノート</h1>
+    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
+      <h1 class="text-xl font-bold">リリースノート</h1>
+    </div>
+    <div class="max-w-4xl mx-auto space-y-8 bg-white px-6 py-8 md:px-10">
       <p>Fast Notion のリリースノート情報は以下にまとめています。</p>
       <template v-for="release in releases" :key="index">
         <div class="space-y-4">
           <h2 class="text-base font-bold">{{ release.title }}</h2>
-          <ul class="px-6">
+          <ul class="px-6 text-sm md:text-base">
             <template v-for="content in release.contents">
               <li type="disc">{{ content }}</li>
             </template>
           </ul>
-          <div v-if="release.twitter" v-html="release.twitter"></div>
+          <div
+            v-if="release.twitter"
+            v-html="release.twitter"
+            class="flex justify-center"
+          ></div>
         </div>
       </template>
     </div>

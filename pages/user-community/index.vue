@@ -1,24 +1,26 @@
 <template>
   <div class="px-6 py-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-xl mx-auto space-y-4">
-      <h1 class="text-xl mb-6">ユーザーコミュニティ（Slack）</h1>
-      <p class="mb-8">
+    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
+      <h1 class="text-xl font-bold">ユーザーコミュニティ（Slack）</h1>
+    </div>
+    <div class="max-w-4xl mx-auto space-y-4 bg-white px-6 py-8 md:px-10">
+      <p class="mb-8 text-sm md:text-base">
         2021/10/04 Fast Notion のユーザーコミュニティを作りました。<a
           href="https://join.slack.com/t/fast-notion/shared_invite/zt-wl4rkm1y-auA8ChpjIiWzAIIVqpnH4A"
           class="underline"
           >こちら</a
-        >から参加できるので、お気軽にご参加ください。<br />（参加出来ない場合は
+        >から参加できるので、お気軽にご参加ください。（参加出来ない場合は
         Twitter アカウント
         <a href="https://twitter.com/FastNotion" class="underline"
           >@FastNotion</a
         >
         までご連絡ください。）
       </p>
-      <h2>よくある質問</h2>
+      <h2 class="text-lg font-semibold">よくある質問</h2>
       <template v-for="faq in faqs" :key="index">
         <details class="hover:cursor-pointer">
-          <summary class="hover:text-primary">{{ faq.question }}</summary>
-          <p v-html="faq.answer"></p></details
+          <summary class="font-medium">{{ faq.question }}</summary>
+          <p v-html="faq.answer" class="text-sm px-4 py-2"></p></details
       ></template>
     </div>
   </div>

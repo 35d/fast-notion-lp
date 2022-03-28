@@ -28,7 +28,7 @@
         <nuxt-link to="/privacy" class="text-gray2 text-xs mr-4 md:mr-6"
           >プライバシーポリシー</nuxt-link
         >
-        <a href="" class="text-gray2 text-xs">利用規約</a>
+        <nuxt-link to="/terms" class="text-gray2 text-xs">利用規約</nuxt-link>
       </div>
     </div>
   </footer>

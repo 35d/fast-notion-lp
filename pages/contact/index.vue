@@ -1,9 +1,13 @@
 <template>
-  <div class="px-6 py-20 md:py-36 bg-gray1">
-    <div class="max-w-xl mx-auto">
-      <h1 class="text-xl mb-4">お問い合わせ</h1>
-      <h2 class="text-base mb-4">Slack コミュニティで質問（推奨）</h2>
-      <p class="mb-8">
+  <div class="px-6 py-20 md:py-36 bg-gray1 text-black1">
+    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
+      <h1 class="text-xl font-bold">お問い合わせ</h1>
+    </div>
+    <div class="max-w-4xl mx-auto bg-white px-6 py-8 md:px-10">
+      <h2 class="text-base mb-4 font-semibold">
+        Slack コミュニティで質問（推奨）
+      </h2>
+      <p class="mb-8 text-sm md:text-base">
         Fast Notion の Slack
         コミュニティで質問が最も素早くレスポンスをすることができます。<br />
         <a
@@ -12,11 +16,11 @@
           >こちら</a
         >からご参加し、#質問 チャンネルにてご質問ください。
       </p>
-      <h2 class="text-base mb-4">問い合わせフォーム</h2>
-      <p>
+      <h2 class="text-base mb-4 font-semibold">問い合わせフォーム</h2>
+      <p class="text-sm md:text-base">
         フォームからも問い合わせすることができます。こちらは返信に時間がかかる場合があります。
       </p>
-      <p>
+      <p class="text-sm md:text-base">
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLScCilnOrO92nvJJ8cJEh6lRQy0gjHBdG3z3HVEc1PSdcp8Hww/viewform"
           class="underline"

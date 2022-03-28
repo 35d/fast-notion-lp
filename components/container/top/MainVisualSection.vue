@@ -20,7 +20,7 @@
         <img src="~@/assets/img/top/mv-download.svg" alt="" />
       </div>
     </div>
-    <div class="absolute bottom-0 w-full md:bottom-1/4 md:right-1/2 md:w-fit">
+    <div class="absolute -bottom-px w-full md:bottom-1/4 md:right-1/2 md:w-fit">
       <div class="mx-9 md:mx-0 lg:mx-24">
         <img src="~@/assets/img/top/title.svg" alt="" />
         <h1 class="text-white text-sm mt-5 mb-3 md:text-base">

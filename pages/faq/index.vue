@@ -1,12 +1,14 @@
 <template>
   <div class="px-6 py-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-xl mx-auto space-y-4">
-      <h1 class="text-xl mb-4">よくある質問</h1>
+    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
+      <h1 class="text-xl font-bold">よくある質問</h1>
+    </div>
+    <div class="max-w-4xl mx-auto space-y-6 bg-white px-6 py-8 md:px-10">
       <template v-for="faq in faqs" :key="index">
         <details class="hover:cursor-pointer">
-          <summary class="hover:text-primary">{{ faq.question }}</summary>
+          <summary class="font-semibold">{{ faq.question }}</summary>
           <div>
-            <ul class="px-6 py-2">
+            <ul class="px-6 py-2 text-sm">
               <template v-for="answer in faq.answer">
                 <li type="disc" v-html="answer"></li>
               </template>
