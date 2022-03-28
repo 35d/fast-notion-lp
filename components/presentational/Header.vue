@@ -4,20 +4,53 @@
       class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl"
     >
       <nuxt-link to="/">
-        <img src="~@/assets/img/parts/fast-notion-white.svg" alt=""
+        <img
+          src="~@/assets/img/parts/fast-notion-white.svg"
+          alt=""
+          v-if="shouldHeaderBgTransparentMode" /><img
+          src="~@/assets/img/parts/fast-notion-black.svg"
+          alt=""
+          class="w-[110px]"
+          v-else
       /></nuxt-link>
       <div class="hidden md:flex md:gap-8">
         <template v-for="content in headerList" :key="index">
-          <nuxt-link :to="content.path" class="text-sm font-bold text-white">{{
-            content.title
-          }}</nuxt-link>
+          <nuxt-link
+            :to="content.path"
+            :class="[
+              'text-sm font-bold ',
+              { 'text-white': shouldHeaderBgTransparentMode },
+              { 'text-black1': !shouldHeaderBgTransparentMode },
+            ]"
+            >{{ content.title }}</nuxt-link
+          >
         </template>
       </div>
       <div class="md:hidden" @click="onClickMenu">
         <button class="h-8 w-9 block relative">
-          <div class="bg-white h-0.5 w-9 absolute top-1"></div>
-          <div class="bg-white h-0.5 w-9 absolute top-3"></div>
-          <p class="text-xs absolute top-4 text-center text-white">MENU</p>
+          <div
+            :class="[
+              ' h-0.5 w-9 absolute top-1',
+              { 'bg-white': shouldHeaderBgTransparentMode },
+              { 'bg-black1': !shouldHeaderBgTransparentMode },
+            ]"
+          ></div>
+          <div
+            :class="[
+              ' h-0.5 w-9 absolute top-3',
+              { 'bg-white': shouldHeaderBgTransparentMode },
+              { 'bg-black1': !shouldHeaderBgTransparentMode },
+            ]"
+          ></div>
+          <p
+            :class="[
+              'text-xs absolute top-4 text-center',
+              { 'text-white': shouldHeaderBgTransparentMode },
+              { 'text-black1': !shouldHeaderBgTransparentMode },
+            ]"
+          >
+            MENU
+          </p>
         </button>
       </div>
     </div>
@@ -99,6 +132,12 @@
 </template>
 <script setup lang="ts">
 const router = useRouter();
+const route = useRoute();
+const shouldHeaderBgTransparentMode = computed<boolean>(() => {
+  if (route.fullPath === "/" || route.fullPath === "") {
+    return true;
+  } else return false;
+});
 const isPanelOpen = ref<boolean>(false);
 const shouldShowHeader = ref<boolean>(false);
 const onClickMenu = () => {

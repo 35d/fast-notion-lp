@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 py-20 md:py-36 bg-gray1 text-black1">
+  <div class="px-6 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
     <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
       <h1 class="text-xl font-bold">リリースノート</h1>
     </div>
