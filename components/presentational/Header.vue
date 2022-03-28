@@ -119,7 +119,7 @@ onMounted(() => {
   registerHeaderAnimationEvent();
 });
 const headerList = [
-  { title: "使い方", path: "/" },
+  { title: "使い方", path: "/manual" },
   { title: "リリースノート", path: "/releases" },
   { title: "よくある質問", path: "/faq" },
   { title: "お問い合わせ", path: "/contact" },

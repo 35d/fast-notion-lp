@@ -37,7 +37,7 @@
 const contents = [
   {
     title: "使い方",
-    path: "/",
+    path: "/manual",
   },
   {
     title: "リリースノート",
