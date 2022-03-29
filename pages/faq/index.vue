@@ -1,20 +1,22 @@
 <template>
   <div class="px-6 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-12">
+    <div
+      class="max-w-4xl space-y-8 md:space-y-10 mx-auto bg-white px-6 py-8 md:px-10 md:py-12"
+    >
       <h1 class="text-xl font-bold">よくある質問</h1>
-    </div>
-    <div class="max-w-4xl mx-auto space-y-6 bg-white px-6 py-8 md:px-10">
-      <template v-for="faq in faqs" :key="index">
-        <details class="hover:cursor-pointer">
-          <summary class="font-semibold">{{ faq.question }}</summary>
-          <div>
-            <ul class="px-6 py-2 text-sm">
-              <template v-for="answer in faq.answer">
-                <li type="disc" v-html="answer"></li>
-              </template>
-            </ul>
-          </div></details
-      ></template>
+      <div class="space-y-6 md:space-y-8">
+        <template v-for="faq in faqs" :key="index">
+          <details class="hover:cursor-pointer">
+            <summary class="font-semibold">{{ faq.question }}</summary>
+            <div>
+              <ul class="px-6 py-2 text-sm">
+                <template v-for="answer in faq.answer">
+                  <li type="disc" v-html="answer"></li>
+                </template>
+              </ul>
+            </div></details
+        ></template>
+      </div>
     </div>
   </div>
 </template>

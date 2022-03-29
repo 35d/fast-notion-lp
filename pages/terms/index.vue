@@ -1,25 +1,29 @@
 <template>
   <div class="px-4 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-16">
+    <div
+      class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-12"
+    >
       <h1 class="text-xl font-bold">利用規約</h1>
-    </div>
-    <div class="max-w-4xl mx-auto space-y-6 bg-white px-6 py-8 md:px-10">
-      <p>
-        English
-        <nuxt-link to="/terms-en" class="underline">🤝 Terms of use</nuxt-link>
-      </p>
-      <p class="text-sm">
-        この利用規約（以下、「本規約」といいます。）は、Fast Notion
-        運営事務局（以下、「当社」といいます。）がこのウェブサイト上で提供するアプリ
-        Fast Notion
-        （以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
-      </p>
-      <template v-for="term in terms" :key="index">
-        <div class="space-y-4">
-          <h2 class="font-bold">{{ term.title }}</h2>
-          <p class="text-sm" v-html="term.description"></p>
-        </div>
-      </template>
+      <div class="space-y-6 md:space-y-8">
+        <p>
+          English
+          <nuxt-link to="/terms-en" class="underline"
+            >🤝 Terms of use</nuxt-link
+          >
+        </p>
+        <p class="text-sm">
+          この利用規約（以下、「本規約」といいます。）は、Fast Notion
+          運営事務局（以下、「当社」といいます。）がこのウェブサイト上で提供するアプリ
+          Fast Notion
+          （以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
+        </p>
+        <template v-for="term in terms" :key="index">
+          <div class="space-y-4">
+            <h2 class="font-bold">{{ term.title }}</h2>
+            <p class="text-sm" v-html="term.description"></p>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>

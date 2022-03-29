@@ -1,35 +1,38 @@
 <template>
   <div class="px-4 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div class="max-w-4xl mx-auto mb-8 px-6 md:mb-16">
+    <div
+      class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-12"
+    >
       <h1 class="text-xl font-bold">Terms of use</h1>
-    </div>
-    <div class="max-w-4xl mx-auto space-y-6 bg-white px-6 py-8 md:px-10">
-      <p>
-        日本語
-        <nuxt-link to="/terms" class="underline">🤝 利用規約</nuxt-link>
-      </p>
-      <p class="text-sm">
-        These terms of use (hereinafter referred to as the "Terms of Use") shall
-        be governed by the Fast Notion Management Office (hereinafter referred
-        to as the "Company"). These terms of use (hereinafter referred to as the
-        "Terms of Use") apply to the application Fast Notion (hereinafter
-        referred to as the "Service") provided by the Fast Notion Management
-        Office (hereinafter referred to as the These terms of use (hereinafter
-        referred to as the "Terms of Use") define the terms of use for the
-        application Fast Notion (hereinafter referred to as the "Service")
-        provided by the Fast Notion Management Office (hereinafter referred to
-        as the "Company") on this website. (hereinafter referred to as the
-        "Company") on this website. All registered users (hereinafter referred
-        to as "users") are required to use the service in accordance with this
-        agreement. All registered users (hereinafter referred to as "users") are
-        required to use the service in accordance with these terms.
-      </p>
-      <template v-for="term in terms" :key="index">
-        <div class="space-y-4">
-          <h2 class="font-bold">{{ term.title }}</h2>
-          <p class="text-sm" v-html="term.description"></p>
-        </div>
-      </template>
+      <div class="space-y-6 md:space-y-8">
+        <p>
+          日本語
+          <nuxt-link to="/terms" class="underline">🤝 利用規約</nuxt-link>
+        </p>
+        <p class="text-sm">
+          These terms of use (hereinafter referred to as the "Terms of Use")
+          shall be governed by the Fast Notion Management Office (hereinafter
+          referred to as the "Company"). These terms of use (hereinafter
+          referred to as the "Terms of Use") apply to the application Fast
+          Notion (hereinafter referred to as the "Service") provided by the Fast
+          Notion Management Office (hereinafter referred to as the These terms
+          of use (hereinafter referred to as the "Terms of Use") define the
+          terms of use for the application Fast Notion (hereinafter referred to
+          as the "Service") provided by the Fast Notion Management Office
+          (hereinafter referred to as the "Company") on this website.
+          (hereinafter referred to as the "Company") on this website. All
+          registered users (hereinafter referred to as "users") are required to
+          use the service in accordance with this agreement. All registered
+          users (hereinafter referred to as "users") are required to use the
+          service in accordance with these terms.
+        </p>
+        <template v-for="term in terms" :key="index">
+          <div class="space-y-4">
+            <h2 class="font-bold">{{ term.title }}</h2>
+            <p class="text-sm" v-html="term.description"></p>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>
