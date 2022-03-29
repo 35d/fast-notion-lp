@@ -18,8 +18,10 @@ module.exports = {
         blue1: "#0E3552",
         blue2: "#7C9BAD",
         beige1: "#fbfbfb",
+        beige2: "#f5f2f0",
         primary: "#0e3652",
         light_gray: "#dbdde1",
+        pink: "#eb5757",
       },
       boxShadow: {
         "3xl":
@@ -31,6 +33,10 @@ module.exports = {
       backgroundImage: {
         "grad-text":
           "linear-gradient(220.58deg, #0E3552 23.07%, #7C9BAD 105.09%)",
+      },
+      padding: {
+        "code-x": "5.44px",
+        "code-y": "2.72px",
       },
     },
   },
