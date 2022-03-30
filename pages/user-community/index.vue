@@ -4,18 +4,22 @@
       class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-12"
     >
       <h1 class="text-xl font-bold">ユーザーコミュニティ（Slack）</h1>
-      <p class="mb-8 text-sm md:text-base">
-        2021/10/04 Fast Notion のユーザーコミュニティを作りました。<a
+      <div>
+        <p class="mb-4 text-sm md:text-base">
+          2021/10/04 Fast Notion
+          のユーザーコミュニティを作りました。下のボタンから参加できるので、お気軽にご参加ください。（参加出来ない場合は
+          Twitter アカウント
+          <a href="https://twitter.com/FastNotion" class="underline"
+            >@FastNotion</a
+          >
+          までご連絡ください。）
+        </p>
+        <a
+          class="block w-48 h-12 mb-8 mx-auto md:mx-0"
           href="https://join.slack.com/t/fast-notion/shared_invite/zt-wl4rkm1y-auA8ChpjIiWzAIIVqpnH4A"
-          class="underline"
-          >こちら</a
-        >から参加できるので、お気軽にご参加ください。（参加出来ない場合は
-        Twitter アカウント
-        <a href="https://twitter.com/FastNotion" class="underline"
-          >@FastNotion</a
-        >
-        までご連絡ください。）
-      </p>
+          ><PrimaryButton>参加する</PrimaryButton>
+        </a>
+      </div>
       <div class="space-y-4">
         <h2 class="text-lg font-semibold">よくある質問</h2>
         <template v-for="faq in faqs" :key="index">
@@ -29,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+import PrimaryButton from "~~/components/atoms/PrimaryButton.vue";
 useMeta(() => ({
   title: "ユーザーコミュニティ",
 }));

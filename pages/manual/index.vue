@@ -6,13 +6,17 @@
       <h1 class="text-xl font-bold">使い方</h1>
       <div class="space-y-8 md:space-y-10">
         <div class="space-y-6">
-          <p class="text-sm md:text-base">
-            設定方法で不明点がある場合はユーザーコミュニティからご質問ください。<br />ユーザーコミュニティの参加方法は<nuxt-link
-              to="user-community"
-              class="underline"
-              >こちら</nuxt-link
-            >。
-          </p>
+          <div>
+            <p class="text-sm md:text-base mb-4">
+              設定方法で不明点がある場合はユーザーコミュニティからご質問ください。<br />ユーザーコミュニティの参加方法は下のボタンから確認できます。
+            </p>
+            <nuxt-link
+              class="block w-48 h-12 mb-8 mx-auto md:mx-0"
+              to="/user-community"
+            >
+              <PrimaryButton>参加方法を見る</PrimaryButton>
+            </nuxt-link>
+          </div>
           <div>
             <p class="mb-4 text-sm md:text-base">
               動画でも解説しているので、もしよければこちらも合わせてご覧ください。
@@ -274,6 +278,7 @@
 
 <script setup lang="ts">
 import Code from "../../components/atoms/code.vue";
+import PrimaryButton from "~~/components/atoms/PrimaryButton.vue";
 useMeta(() => ({
   title: "使い方",
 }));

@@ -10,9 +10,12 @@
         コミュニティで質問が最も素早くレスポンスをすることができます。<br />
         下のボタンからご参加し、#質問 チャンネルにてご質問ください。
       </p>
-      <div class="w-48 h-12 mb-8 mx-auto md:mx-0" @click="joinSlack">
-        <primary-button>参加する</primary-button>
-      </div>
+      <a
+        class="block w-48 h-12 mb-8 mx-auto md:mx-0"
+        href="https://join.slack.com/t/fast-notion/shared_invite/zt-wl4rkm1y-auA8ChpjIiWzAIIVqpnH4A"
+      >
+        <PrimaryButton>参加する</PrimaryButton>
+      </a>
       <h2 class="text-base mb-4 font-semibold">問い合わせフォーム</h2>
       <p class="text-sm md:text-base">
         フォームからも問い合わせすることができます。こちらは返信に時間がかかる場合があります。

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-full bg-primary flex justify-center items-center rounded cursor-pointer"
+    class="w-full h-full bg-blue1 flex justify-center items-center rounded cursor-pointer hover:bg-blue3"
   >
     <p class="text-white"><slot></slot></p>
   </div>
