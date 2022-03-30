@@ -36,6 +36,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "お問い合わせ",
+}));
 const route = useRoute();
 const path = route.fullPath;
 </script>

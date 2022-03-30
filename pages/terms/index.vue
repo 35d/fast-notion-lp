@@ -29,6 +29,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "利用規約",
+}));
 const terms = [
   {
     title: "第1条（適用）",

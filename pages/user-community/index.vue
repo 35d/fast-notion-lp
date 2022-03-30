@@ -29,6 +29,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "ユーザーコミュニティ",
+}));
 const faqs = [
   {
     question: "初心者ですが参加して良いですか？",

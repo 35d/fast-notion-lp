@@ -22,6 +22,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "よくある質問",
+}));
 const faqs = [
   {
     question: "Fast Notion は無料アプリですか？",

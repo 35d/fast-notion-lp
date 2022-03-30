@@ -21,6 +21,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "プライバシーポリシー",
+}));
 const terms = [
   {
     title: "第1条（個人情報）",

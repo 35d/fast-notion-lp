@@ -38,6 +38,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "Terms of use",
+}));
 const terms = [
   {
     title: "Article 1 (Application)",

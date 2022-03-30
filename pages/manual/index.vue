@@ -274,6 +274,9 @@
 
 <script setup lang="ts">
 import Code from "../../components/atoms/code.vue";
+useMeta(() => ({
+  title: "使い方",
+}));
 const manual1 = [
   {
     title: "1. かんたん設定モード画面を開き、Notion にログインする",

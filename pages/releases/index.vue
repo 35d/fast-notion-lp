@@ -27,6 +27,9 @@
 </template>
 
 <script setup lang="ts">
+useMeta(() => ({
+  title: "リリースノート",
+}));
 const route = useRoute();
 const path = route.fullPath;
 const releases = [
