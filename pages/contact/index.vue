@@ -5,15 +5,14 @@
       <h2 class="text-base mb-4 font-semibold">
         Slack コミュニティで質問（推奨）
       </h2>
-      <p class="mb-8 text-sm md:text-base">
+      <p class="mb-4 text-sm md:text-base">
         Fast Notion の Slack
         コミュニティで質問が最も素早くレスポンスをすることができます。<br />
-        <a
-          href="https://join.slack.com/t/fast-notion/shared_invite/zt-wl4rkm1y-auA8ChpjIiWzAIIVqpnH4A"
-          class="underline"
-          >こちら</a
-        >からご参加し、#質問 チャンネルにてご質問ください。
+        下のボタンからご参加し、#質問 チャンネルにてご質問ください。
       </p>
+      <div class="w-48 h-12 mb-8 mx-auto md:mx-0" @click="joinSlack">
+        <primary-button>参加する</primary-button>
+      </div>
       <h2 class="text-base mb-4 font-semibold">問い合わせフォーム</h2>
       <p class="text-sm md:text-base">
         フォームからも問い合わせすることができます。こちらは返信に時間がかかる場合があります。
@@ -36,9 +35,14 @@
 </template>
 
 <script setup lang="ts">
+import PrimaryButton from "~~/components/atoms/PrimaryButton.vue";
 useMeta(() => ({
   title: "お問い合わせ",
 }));
 const route = useRoute();
 const path = route.fullPath;
+const joinSlack = () => {
+  window.location.href =
+    "https://join.slack.com/t/fast-notion/shared_invite/zt-wl4rkm1y-auA8ChpjIiWzAIIVqpnH4A";
+};
 </script>
