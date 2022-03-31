@@ -260,12 +260,9 @@
                     class="pl-2 md:pl-4 leading-6 md:leading-7"
                     v-html="manual.description"
                   ></p>
-                  <img
-                    :src="manual.imgPath"
-                    alt=""
-                    v-if="manual.imgPath"
-                    class="max-w-xl mx-auto"
-                  />
+                  <div class="max-w-xl mx-auto">
+                    <img :src="manual.imgPath" alt="" v-if="manual.imgPath" />
+                  </div>
                 </div>
               </details>
             </template>
