@@ -277,7 +277,7 @@
 </template>
 
 <script setup lang="ts">
-import Code from "../../components/atoms/code.vue";
+import Code from "../../components/atoms/Code.vue";
 import PrimaryButton from "~~/components/atoms/PrimaryButton.vue";
 useMeta(() => ({
   title: "使い方",
