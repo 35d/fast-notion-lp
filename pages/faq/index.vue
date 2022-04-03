@@ -1,45 +1,46 @@
 <template>
   <div class="px-6 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div
-      class="max-w-4xl space-y-8 md:space-y-10 mx-auto bg-white px-6 py-8 md:px-10 md:py-12"
-    >
+    <div class="max-w-4xl space-y-8 md:space-y-10 mx-auto bg-white px-6 py-8 md:px-10 md:py-12 rounded-md">
       <h1 class="text-xl font-bold">よくある質問</h1>
       <div class="space-y-6 md:space-y-8">
-        <template v-for="faq in faqs" :key="index">
-          <details class="hover:cursor-pointer">
-            <summary class="font-semibold">{{ faq.question }}</summary>
-            <div>
-              <ul class="px-6 py-2 text-sm">
-                <template v-for="answer in faq.answer">
-                  <li type="disc" v-html="answer"></li>
-                </template>
-              </ul>
-            </div></details
-        ></template>
+        <client-only placeholder="読込中">
+          <div v-for="faq in faqs" :key="faq.answer">
+            <details class="hover:cursor-pointer">
+              <summary class="font-semibold">{{ faq.question }}</summary>
+              <div>
+                <p class="px-6 py-2 text-sm leading-6 whitespace-pre-line">{{ faq.answer }}</p>
+              </div>
+            </details>
+          </div>
+        </client-only>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import useSWRV from "swrv";
+
+interface Faq {
+  question: string;
+  answer: string;
+}
+
 useMeta(() => ({
   title: "よくある質問",
 }));
-const faqs = [
-  {
-    question: "Fast Notion は無料アプリですか？",
-    answer: [
-      "無料で使用可能です（一部機能を除く）",
-      "プロプラン（有料プラン）にアップグレードいただくことで、より強力に Fast Notion をお使いいただくことが可能です。プロプランについての詳しい説明はこちら。",
-    ],
-  },
-  { question: "非公開ページにも投稿可能ですか？", answer: ["投稿可能です。"] },
-  {
-    question: "データベースにメモを投稿することはできますか？",
-    answer: [
-      "プロプランのみ投稿可能です。プロプランについての詳しい説明はこちら。",
-      "データベースの連携方法はマニュアルページに記載しています。",
-    ],
-  },
-];
+
+const { data } = useSWRV("https://us-central1-fast-notion.cloudfunctions.net/v2/helps");
+
+const faqs = computed<Faq[]>(() => {
+  if (!data.value || !data.value.results) return [];
+
+  const a: Faq[] = data.value.results
+    .map((_) => _.properties)
+    .map((_) => ({
+      question: _.title.title[0].plain_text,
+      answer: _.description.rich_text[0].plain_text,
+    }));
+  return a.reverse();
+});
 </script>
