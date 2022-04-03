@@ -19,7 +19,7 @@
     </div>
     <h3 class="text-center mt-24 mb-10 font-medium text-xl">自由にメモ形式を指定できる</h3>
     <div class="mb-8 md:flex md:flex-wrap md:w-4/5 md:mx-auto md:max-w-4xl">
-      <template v-for="cando in candos" :key="index">
+      <template v-for="(cando, index) in candos" :key="index">
         <div class="flex flex-col px-6 pb-8 md:w-1/2 md:px-4">
           <div class="flex flex-col items-center shadow-3xl rounded">
             <p class="text-base font-bold text-black1 mb-1 mt-10">

@@ -1,20 +1,15 @@
 <template>
   <header class="z-10 flex justify-center">
-    <div
-      class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl"
-    >
+    <div class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl">
       <nuxt-link to="/">
-        <img
-          src="~@/assets/img/parts/fast-notion-white.svg"
-          alt=""
-          v-if="shouldHeaderBgTransparentMode" /><img
+        <img src="~@/assets/img/parts/fast-notion-white.svg" alt="" v-if="shouldHeaderBgTransparentMode" /><img
           src="~@/assets/img/parts/fast-notion-black.svg"
           alt=""
           class="w-[110px]"
           v-else
       /></nuxt-link>
       <div class="hidden md:flex md:gap-8">
-        <template v-for="content in headerList" :key="index">
+        <template v-for="content in headerList" :key="content.title">
           <nuxt-link
             :to="content.path"
             :class="[
@@ -62,17 +57,10 @@
         { '-top-20': !shouldShowHeader },
       ]"
     >
-      <nuxt-link to="/">
-        <img
-          src="~@/assets/img/parts/fast-notion-black.svg"
-          alt=""
-          class="block w-36 h-auto pl-8"
-      /></nuxt-link>
+      <nuxt-link to="/"> <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" class="block w-36 h-auto pl-8" /></nuxt-link>
       <div class="hidden md:flex md:gap-8 pr-8">
-        <template v-for="content in headerList" :key="index">
-          <nuxt-link :to="content.path" class="text-sm font-bold text-black1">{{
-            content.title
-          }}</nuxt-link>
+        <template v-for="content in headerList" :key="content.title">
+          <nuxt-link :to="content.path" class="text-sm font-bold text-black1">{{ content.title }}</nuxt-link>
         </template>
       </div>
       <div class="md:hidden pr-8" @click="onClickMenu">
@@ -92,28 +80,17 @@
       ]"
     >
       <div class="pt-8 px-6 mb-16 flex justify-between">
-        <img
-          src="~@/assets/img/parts/fast-notion-black.svg"
-          alt=""
-          class="w-36"
-        />
+        <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" class="w-36" />
         <div class="md:hidden" @click="onClickMenu">
           <button class="h-8 w-9 block relative">
-            <div
-              class="bg-black1 h-0.5 w-8 z-20 absolute top-4 rotate-45"
-            ></div>
-            <div
-              class="bg-black1 h-0.5 w-8 z-20 absolute -rotate-45 top-4"
-            ></div>
+            <div class="bg-black1 h-0.5 w-8 z-20 absolute top-4 rotate-45"></div>
+            <div class="bg-black1 h-0.5 w-8 z-20 absolute -rotate-45 top-4"></div>
           </button>
         </div>
       </div>
-      <template v-for="content in headerList" :key="index">
+      <template v-for="content in headerList" :key="content.title">
         <div class="p-4 mx-6 mb-3">
-          <p
-            @click="jumpToPath(content.path)"
-            class="text-sm text-black1 font-bold"
-          >
+          <p @click="jumpToPath(content.path)" class="text-sm text-black1 font-bold">
             {{ content.title }}
           </p>
         </div>
@@ -122,8 +99,7 @@
         <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
           ><img src="~@/assets/img/parts/download-ios.svg" alt=""
         /></a>
-        <a
-          href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"
+        <a href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"
           ><img src="~@/assets/img/parts/download-android.svg" alt=""
         /></a>
       </div>
