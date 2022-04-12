@@ -3,6 +3,9 @@
     <div class="max-w-4xl space-y-8 md:space-y-10 mx-auto bg-white px-6 py-8 md:px-10 md:py-12 rounded-md">
       <h1 class="text-xl font-bold">よくある質問</h1>
       <div class="space-y-6 md:space-y-8">
+        <template v-if="faqs.length === 0">
+          <p>読込中</p>
+        </template>
         <client-only placeholder="読込中">
           <div v-for="faq in faqs" :key="faq.answer">
             <details class="hover:cursor-pointer">
