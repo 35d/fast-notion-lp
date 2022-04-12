@@ -13,6 +13,8 @@
     "tailwindcss": "^3.0.23"
   },
   "dependencies": {
-    "swrv": "^1.0.0-beta.8"
+    "add": "^2.0.6",
+    "swrv": "^1.0.0-beta.8",
+    "vue-gtag": "^2.0.1"
   }
 }

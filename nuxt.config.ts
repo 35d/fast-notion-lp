@@ -5,12 +5,6 @@ export default defineNuxtConfig({
   build: {
     postcss: {
       postcssOptions: require("./postcss.config.js"),
-      // postcssOptions: {
-      //   plugins: {
-      //     tailwindcss: {},
-      //     autoprefixer: {},
-      //   },
-      // },
     },
   },
   css: ["@/assets/css/main.css"],
