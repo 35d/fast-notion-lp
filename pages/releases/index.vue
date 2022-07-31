@@ -7,7 +7,8 @@
           <p>読込中</p>
         </template>
         <client-only placeholder="読込中">
-          <div v-for="(r, i) in releaseNotes" :key="r.answer">
+          <div v-for="(r, i) in releaseNotes" :key="r.title">
+            {{ r.tweetUrl }}
             <details class="hover:cursor-pointer" :open="i < 3">
               <summary class="font-semibold">{{ r.title }}（{{ r.dateStr }}）</summary>
               <div>
@@ -43,13 +44,15 @@ const releaseNotes = computed<ReleaseNote[]>(() => {
   const a: ReleaseNote[] = data.value.results
     .map((_) => _.properties)
     .map((_) => {
+      console.log(_);
       return {
         title: _.title.title[0].plain_text,
         body: _.description.rich_text[0].plain_text,
         dateStr: _.date.date.start.replaceAll("-", "/"),
-        tweetUrl: "",
+        tweetUrl: _.tweet.rich_text[0]?.plain_text || "",
       };
     });
+
   return a.sort((a, b) => {
     if (a.dateStr < b.dateStr) return 1;
     if (a.dateStr === b.dateStr) return 0;
