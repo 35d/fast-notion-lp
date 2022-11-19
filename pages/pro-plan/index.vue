@@ -9,7 +9,7 @@ export default defineComponent({
 
     // Fast Notion アプリ内のリンクが /pro-plan となっており、
     // このページに来ると 404 になってしまうため
-    router.replace("/faq");
+    router.push("/faq");
   },
 });
 </script>
