@@ -86,8 +86,12 @@
                   投稿先となる Notion のページを作成後、上記のステップで作成した Integration
                   の権限を与えてください（スクリーンショットでは、Fast Notion という Integration を追加しています）
                 </p>
-                <p>Notion のページの右上の Share ボタンから権限を追加することができます。</p>
-                <img src="/img/manual/2-2.png" alt="" class="w-full max-w-xl mx-auto" />
+                <p>
+                  Notion
+                  ページ設定内の「コネクト」からインテグレーションを追加することができます。さきほど追加したインテグレーションを検索し、設定してください。※
+                  以前は「共有」からインテグレーションを追加していたのですが、2022年10月頃に仕様が変更になったのでご注意ください
+                </p>
+                <img src="/img/manual/2-2-1.png" alt="" class="w-full max-w-xl mx-auto" />
               </div>
             </details>
             <details class="hover:cursor-pointer">
