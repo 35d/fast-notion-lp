@@ -3,6 +3,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "generate": "nuxi generate",
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
@@ -14,7 +15,6 @@
   },
   "dependencies": {
     "add": "^2.0.6",
-    "swrv": "^1.0.0-beta.8",
     "vue-gtag": "^2.0.1"
   }
 }

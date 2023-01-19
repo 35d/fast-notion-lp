@@ -22,25 +22,23 @@
 </template>
 
 <script setup lang="ts">
-import useSWRV from "swrv";
-
 interface Faq {
   question: string;
   answer: string;
 }
 
-useMeta(() => ({
-  title: "よくある質問",
-}));
+const { data } = useFetch<any>("https://us-central1-fast-notion.cloudfunctions.net/v2/helps");
 
-const { data } = useSWRV("https://us-central1-fast-notion.cloudfunctions.net/v2/helps");
+useHead(() => ({
+  title: `よくある質問`,
+}));
 
 const faqs = computed<Faq[]>(() => {
   if (!data.value || !data.value.results) return [];
 
   const a: Faq[] = data.value.results
-    .map((_) => _.properties)
-    .map((_) => ({
+    .map((_: any) => _.properties)
+    .map((_: any) => ({
       question: _.title.title[0].plain_text,
       answer: _.description.rich_text[0].plain_text,
     }));

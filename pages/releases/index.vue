@@ -23,8 +23,6 @@
 </template>
 
 <script setup lang="ts">
-import useSWRV from "swrv";
-
 interface ReleaseNote {
   title: string;
   body: string;
@@ -36,15 +34,15 @@ useHead(() => ({
   title: "リリースノート",
 }));
 
-const { data } = useSWRV("https://us-central1-fast-notion.cloudfunctions.net/v2/release-notes");
+const { data } = useFetch<any>("https://us-central1-fast-notion.cloudfunctions.net/v2/release-notes");
 
 const releaseNotes = computed<ReleaseNote[]>(() => {
   if (!data.value || !data.value.results) return [];
 
   const a: ReleaseNote[] = data.value.results
-    .map((_) => _.properties)
-    .map((_) => {
-      console.log(_);
+    .map((_: any) => _.properties)
+    .map((_: any) => {
+      // console.log(_);
       return {
         title: _.title.title[0].plain_text,
         body: _.description.rich_text[0].plain_text,
@@ -55,8 +53,8 @@ const releaseNotes = computed<ReleaseNote[]>(() => {
 
   return a.sort((a, b) => {
     if (a.dateStr < b.dateStr) return 1;
-    if (a.dateStr === b.dateStr) return 0;
     if (a.dateStr > b.dateStr) return -1;
+    return 0;
   });
 });
 </script>
