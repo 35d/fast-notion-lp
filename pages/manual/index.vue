@@ -5,9 +5,7 @@
       <div class="space-y-8 md:space-y-10">
         <div class="space-y-6">
           <div>
-            <p class="text-sm md:text-base mb-4">
-              設定方法で不明点がある場合はユーザーコミュニティからご質問ください。<br />ユーザーコミュニティの参加方法は下のボタンから確認できます。
-            </p>
+            <p class="text-sm md:text-base mb-4">設定方法で不明点がある場合はユーザーコミュニティからご質問ください。<br />ユーザーコミュニティの参加方法は下のボタンから確認できます。</p>
             <nuxt-link class="block w-48 h-12 mb-8 mx-auto md:mx-0" to="/user-community">
               <PrimaryButton>参加方法を見る</PrimaryButton>
             </nuxt-link>
@@ -65,14 +63,9 @@
                 </p>
                 <div class="flex flex-col gap-2 max-w-xl mx-auto">
                   <img src="/img/manual/2-1-1.png" alt="" />
-                  <p class="text-xs md:text-sm text-gray2">
-                    Notion Integration 作成画面（既にいくつか Integration が作成されている状態）
-                  </p>
+                  <p class="text-xs md:text-sm text-gray2">Notion Integration 作成画面（既にいくつか Integration が作成されている状態）</p>
                 </div>
-                <p class="py-4">
-                  Integration を作成が完了したら、Secrets というところから、Token が取得できるので、こちらの値が Notion
-                  Integration Token になります。
-                </p>
+                <p class="py-4">Integration を作成が完了したら、Secrets というところから、Token が取得できるので、こちらの値が Notion Integration Token になります。</p>
                 <div class="flex flex-col gap-2 max-w-xl mx-auto">
                   <img src="/img/manual/2-1-2.png" alt="" />
                   <p class="text-xs md:text-sm text-gray2">Integration Token の取得方法</p>
@@ -82,13 +75,9 @@
             <details class="hover:cursor-pointer">
               <summary class="font-semibold">2. 投稿したいページの作成・Integration 権限の付与</summary>
               <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
+                <p>投稿先となる Notion のページを作成後、上記のステップで作成した Integration の権限を与えてください（スクリーンショットでは、Fast Notion という Integration を追加しています）</p>
                 <p>
-                  投稿先となる Notion のページを作成後、上記のステップで作成した Integration
-                  の権限を与えてください（スクリーンショットでは、Fast Notion という Integration を追加しています）
-                </p>
-                <p>
-                  Notion
-                  ページ設定内の「コネクト」からインテグレーションを追加することができます。さきほど追加したインテグレーションを検索し、設定してください。※
+                  Notion ページ設定内の「コネクト」からインテグレーションを追加することができます。さきほど追加したインテグレーションを検索し、設定してください。※
                   以前は「共有」からインテグレーションを追加していたのですが、2022年10月頃に仕様が変更になったのでご注意ください
                 </p>
                 <img src="/img/manual/2-2-1.png" alt="" class="w-full max-w-xl mx-auto" />
@@ -106,8 +95,7 @@
                 <p class="leading-6 md:leading-7">
                   URL は
                   <Code>https://www.notion.so/[アカウント名]/[PAGE名]-[PAGE_ID(32桁の文字列)]</Code>
-                  という形式になっています。ここの末尾の 32 桁の文字列が PAGE ID
-                  になっているので、その部分のみを取得してください。
+                  という形式になっています。ここの末尾の 32 桁の文字列が PAGE ID になっているので、その部分のみを取得してください。
                 </p>
                 <p class="leading-6 md:leading-7 pb-8">
                   （例）コピーしたURLが
@@ -118,16 +106,12 @@
                 </p>
                 <p class="font-semibold">DB モードの場合（Pro Plan 限定）</p>
                 <p>
-                  DB モードを設定した場合には、Fast Notion からのメモがデータベースに保存されます（Pro Plan
-                  限定の機能になります）DB モードの場合も同様の方法で ID
+                  DB モードを設定した場合には、Fast Notion からのメモがデータベースに保存されます（Pro Plan 限定の機能になります）DB モードの場合も同様の方法で ID
                   を取得します。まずは、データベース（テーブル）のリンクをコピーしてください。
                 </p>
                 <div class="flex flex-col gap-2 max-w-xl mx-auto pb-4">
                   <img src="/img/manual/2-3-2.png" alt="" />
-                  <p class="text-xs md:text-sm text-gray2">
-                    データベースのリンクをコピーする（フルページデータベースの場合には、TEXT
-                    モードの場合と同様、右上のボタンからリンクをコピーしてください）
-                  </p>
+                  <p class="text-xs md:text-sm text-gray2">データベースのリンクをコピーする（フルページデータベースの場合には、TEXT モードの場合と同様、右上のボタンからリンクをコピーしてください）</p>
                 </div>
                 <p class="leading-6 md:leading-7">
                   URL は
@@ -140,12 +124,8 @@
                 </p>
                 <p class="leading-6 md:leading-7">
                   （例）コピーした URLが
-                  <Code class="md:hidden"
-                    >https://www.notion.so/35d/a2f9332ec0f9 4d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code
-                  >
-                  <Code class="hidden md:inline"
-                    >https://www.notion.so/35d/a2f9332ec0f94d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code
-                  >
+                  <Code class="md:hidden">https://www.notion.so/35d/a2f9332ec0f9 4d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code>
+                  <Code class="hidden md:inline">https://www.notion.so/35d/a2f9332ec0f94d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code>
                   となっていた場合は、PAGE ID は
                   <Code>a2f9332ec0f94d5e9d06581ed864047c</Code> です。
                 </p>
@@ -154,17 +134,12 @@
             <details class="hover:cursor-pointer">
               <summary class="font-semibold">4. Fast Notion へ設定</summary>
               <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
-                <p>
-                  Notion API Mode を ON にして、1~3 のステップで取得した情報を Fast Notion へ入力してください。OFF
-                  にした場合のレガシーモード（後述）は、現在非推奨となっているのでご注意ください。
-                </p>
+                <p>Notion API Mode を ON にして、1~3 のステップで取得した情報を Fast Notion へ入力してください。OFF にした場合のレガシーモード（後述）は、現在非推奨となっているのでご注意ください。</p>
                 <div class="flex flex-col gap-2 max-w-xl mx-auto">
                   <img src="/img/manual/2-4.png" alt="" />
                   <p class="text-xs md:text-sm text-gray2">Fast Notion の設定画面</p>
                 </div>
-                <p class="py-4">
-                  設定方法は、動画でも紹介しているので、こちらも合わせてご覧頂くと設定方法のイメージがつきやすいかもしれません）
-                </p>
+                <p class="py-4">設定方法は、動画でも紹介しているので、こちらも合わせてご覧頂くと設定方法のイメージがつきやすいかもしれません）</p>
                 <iframe
                   src="https://www.youtube.com/embed/SLADEKLwinU"
                   title="YouTube video player"
@@ -204,14 +179,13 @@
 <script setup lang="ts">
 import Code from "../../components/atoms/Code.vue";
 import PrimaryButton from "~~/components/atoms/PrimaryButton.vue";
-useMeta(() => ({
+useHead(() => ({
   title: "使い方",
 }));
 const manual1 = [
   {
     title: "1. かんたん設定モード画面を開き、Notion にログインする",
-    description:
-      "Fast Notion の URL設定画面から「かんたん設定ボタン」をタップします。Safariが開かれるので、「Notion で認証をする」ボタンをタップし、Notionにログインしてください。",
+    description: "Fast Notion の URL設定画面から「かんたん設定ボタン」をタップします。Safariが開かれるので、「Notion で認証をする」ボタンをタップし、Notionにログインしてください。",
     contents: `<div class="flex flex-col gap-2">
                 <img src="/img/manual/1-1-1.png" alt="" />
                 <p class="text-xs md:text-sm text-gray2">URL 設定画面</p>

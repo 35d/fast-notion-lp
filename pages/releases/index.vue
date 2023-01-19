@@ -32,7 +32,7 @@ interface ReleaseNote {
   tweetUrl: string;
 }
 
-useMeta(() => ({
+useHead(() => ({
   title: "リリースノート",
 }));
 

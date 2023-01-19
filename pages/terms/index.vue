@@ -1,20 +1,14 @@
 <template>
   <div class="px-4 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div
-      class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-12"
-    >
+    <div class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-12">
       <h1 class="text-xl font-bold">利用規約</h1>
       <div class="space-y-6 md:space-y-8">
         <p>
           English
-          <nuxt-link to="/terms-en" class="underline"
-            >🤝 Terms of use</nuxt-link
-          >
+          <nuxt-link to="/terms-en" class="underline">🤝 Terms of use</nuxt-link>
         </p>
         <p class="text-sm">
-          この利用規約（以下、「本規約」といいます。）は、Fast Notion
-          運営事務局（以下、「当社」といいます。）がこのウェブサイト上で提供するアプリ
-          Fast Notion
+          この利用規約（以下、「本規約」といいます。）は、Fast Notion 運営事務局（以下、「当社」といいます。）がこのウェブサイト上で提供するアプリ Fast Notion
           （以下，「本サービス」といいます。）の利用条件を定めるものです。登録ユーザーの皆さま（以下，「ユーザー」といいます。）には，本規約に従って，本サービスをご利用いただきます。
         </p>
         <template v-for="term in terms" :key="index">
@@ -29,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-useMeta(() => ({
+useHead(() => ({
   title: "利用規約",
 }));
 const terms = [
@@ -70,8 +64,7 @@ const terms = [
   },
   {
     title: "第8条（サービス内容の変更等）",
-    description:
-      "当社は，ユーザーに通知することなく，本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし，これによってユーザーに生じた損害について一切の責任を負いません。",
+    description: "当社は，ユーザーに通知することなく，本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし，これによってユーザーに生じた損害について一切の責任を負いません。",
   },
   {
     title: "第9条（利用規約の変更）",
@@ -80,8 +73,7 @@ const terms = [
   },
   {
     title: "第10条（個人情報の取扱い）",
-    description:
-      "当社は，本サービスの利用によって取得する個人情報については，当社「プライバシーポリシー」に従い適切に取り扱うものとします。",
+    description: "当社は，本サービスの利用によって取得する個人情報については，当社「プライバシーポリシー」に従い適切に取り扱うものとします。",
   },
   {
     title: "第11条（通知または連絡）",
@@ -90,13 +82,11 @@ const terms = [
   },
   {
     title: "第12条（権利義務の譲渡の禁止）",
-    description:
-      "ユーザーは，当社の書面による事前の承諾なく，利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し，または担保に供することはできません。",
+    description: "ユーザーは，当社の書面による事前の承諾なく，利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し，または担保に供することはできません。",
   },
   {
     title: "第13条（準拠法・裁判管轄）",
-    description:
-      "本規約の解釈にあたっては，日本法を準拠法とします。本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。",
+    description: "本規約の解釈にあたっては，日本法を準拠法とします。本サービスに関して紛争が生じた場合には，当社の本店所在地を管轄する裁判所を専属的合意管轄とします。",
   },
 ];
 </script>
