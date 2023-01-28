@@ -16,8 +16,8 @@
             <th class="p-0">
               <div class="bg-blue1 mx-1 h-20 flex flex-col items-center justify-center rounded-t border border-blue1">
                 <p class="text-beige1 text-xs font-medium">プロ</p>
-                <p class="text-beige1 text-xs font-medium">月額 <span class="text-base font-bold">200</span>円</p>
-                <p class="text-light_gray text-xs font-medium">年間 2,000円</p>
+                <p class="text-beige1 text-xs font-medium">月額 <span class="text-base font-bold">500</span>円</p>
+                <p class="text-light_gray text-xs font-medium">年間 5,000円</p>
               </div>
             </th>
           </tr>
@@ -29,12 +29,7 @@
                 <p v-html="plan.title" class="text-blue1 font-medium text-xs md:text-sm"></p>
               </td>
               <td height="48px" class="p-0 w-[28%] md:w-[35%]">
-                <div
-                  :class="[
-                    'mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center',
-                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
-                  ]"
-                >
+                <div :class="['mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center', { 'border-b rounded-b': plan.title === 'URL 登録数の上限' }]">
                   <p class="text-blue1 font-medium text-sm text-center">
                     {{ plan.col1Text }}
                   </p>
@@ -42,12 +37,7 @@
                 </div>
               </td>
               <td height="48px" class="p-0 w-[28%] md:w-[35%]">
-                <div
-                  :class="[
-                    'mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center',
-                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
-                  ]"
-                >
+                <div :class="['mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center', { 'border-b rounded-b': plan.title === 'URL 登録数の上限' }]">
                   <p class="text-blue1 font-medium text-sm text-center">
                     {{ plan.col2Text }}
                   </p>
