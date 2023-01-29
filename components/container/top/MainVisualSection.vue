@@ -24,10 +24,12 @@
       <div class="mx-9 md:mx-0 lg:mx-24">
         <img src="~@/assets/img/top/title.svg" alt="" />
         <h1 class="text-white text-sm mt-5 mb-3 md:text-base">
-          FastNotionはNotion上にスムーズにメモを取る<br />ことができるスマートフォンアプリです。
+          {{ t("description1") }}
+          <br />
+          {{ t("description2") }}
         </h1>
         <p class="text-gray2 text-xs mb-16 md:text-sm md:mb-8">
-          ※2022年2月時点、650件の評価。
+          {{ t("description3") }}
         </p>
       </div>
       <div
@@ -44,3 +46,9 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
+
+<i18n src="./mainVisualSectionMessage.json"></i18n>
