@@ -1,10 +1,16 @@
 {
   "en": {
     "lang": "日本語",
-    "manual": "how to use"
+    "manual": "How to use",
+    "releases": "Releases",
+    "faq": "FAQ",
+    "contact": "Contact Us"
   },
   "ja": {
     "lang": "English",
-    "manual": "使い方"
+    "manual": "使い方",
+    "releases": "リリースノート",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ"
   }
 }
