@@ -59,7 +59,9 @@
                 <div
                   :class="[
                     'mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center',
-                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
+                    {
+                      'border-b rounded-b': index === plans.length - 1,
+                    },
                   ]"
                 >
                   <p class="text-blue1 font-medium text-sm text-center">
@@ -72,7 +74,9 @@
                 <div
                   :class="[
                     'mx-1 h-full bg-beige1 border-x border-blue1 flex justify-center items-center',
-                    { 'border-b rounded-b': plan.title === 'URL 登録数の上限' },
+                    {
+                      'border-b rounded-b': index === plans.length - 1,
+                    },
                   ]"
                 >
                   <p class="text-blue1 font-medium text-sm text-center">
