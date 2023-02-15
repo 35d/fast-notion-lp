@@ -61,7 +61,8 @@
     "manual3Title2": "2. Copy of token_v2",
     "manual3Description2": "Find <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Application Tab</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Storage</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Cookies</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">token_v2</span> , and copy <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Value</span> .",
     "manual3Title3": "3. Paste it into the application",
-    "manual3Description3": "Paste your URL into the Fast Notion app via Slack, SNS, etc. This completes the setup👍 If Notion API Mode is turned off, this token is used. *Tokens are important information that identifies you personally. Please be careful not to divulge this information to third parties."
+    "manual3Description3": "Paste your URL into the Fast Notion app via Slack, SNS, etc. This completes the setup👍 If Notion API Mode is turned off, this token is used. *Tokens are important information that identifies you personally. Please be careful not to divulge this information to third parties.",
+    "_": ""
   },
   "ja": {
     "description1": "使い方",
@@ -125,6 +126,7 @@
     "manual3Title2": "2. token_v2 のコピー",
     "manual3Description2": "<span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Application タブ</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Storage</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Cookies</span> > <span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">token_v2</span> を探して、<span class=\"px-code-x py-code-y bg-beige2 text-pink rounded-sm\">Value</span> をコピーしてください。",
     "manual3Title3": "3. アプリ内に貼り付けてください",
-    "manual3Description3": "Slack や、SNS 等を経由して、コピーしたあなたの URL を Fast Notion アプリ内に貼り付けてください。これで設定は完了です👍  Notion API Mode を OFF にした場合は、こちらのトークンが使われます。<br>※トークンは、個人を特定する大切な情報です。第三者に漏らさないようにご注意ください。"
+    "manual3Description3": "Slack や、SNS 等を経由して、コピーしたあなたの URL を Fast Notion アプリ内に貼り付けてください。これで設定は完了です👍  Notion API Mode を OFF にした場合は、こちらのトークンが使われます。<br>※トークンは、個人を特定する大切な情報です。第三者に漏らさないようにご注意ください。",
+    "_": ""
   }
 }

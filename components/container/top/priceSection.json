@@ -18,7 +18,9 @@
     "historyTitle": "History storage<br>Up to 100 records",
     "databaseTitle": "Databese Post Mode",
     "urlTitle": "Maximum number of URL registered",
-    "urlCol2": "Unlimited"
+    "urlCol2": "Unlimited",
+    "_": "",
+    "2": "2"
   },
   "ja": {
     "description1": "料金",
@@ -39,6 +41,8 @@
     "historyTitle": "履歴の保存<br>上限100件",
     "databaseTitle": "データベース投稿モード",
     "urlTitle": "URL 登録数の上限",
-    "urlCol2": "無制限"
+    "urlCol2": "無制限",
+    "_": "",
+    "2": "2"
   }
 }

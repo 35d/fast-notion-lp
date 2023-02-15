@@ -1,19 +1,12 @@
 <template>
   <div class="px-6 pt-24 pb-20 md:py-36 bg-gray1 text-black1">
-    <div
-      class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-14"
-    >
+    <div class="max-w-4xl mx-auto space-y-8 md:space-y-10 bg-white px-6 py-8 md:px-10 md:py-14">
       <h1 class="text-xl font-bold">{{ t("description1") }}</h1>
       <div class="space-y-8 md:space-y-10">
         <div class="space-y-6">
           <div>
-            <p class="text-sm md:text-base mb-4">
-              {{ t("description2") }}<br />{{ t("description3") }}
-            </p>
-            <nuxt-link
-              class="block w-48 h-12 mb-8 mx-auto md:mx-0"
-              to="/user-community"
-            >
+            <p class="text-sm md:text-base mb-4">{{ t("description2") }}<br />{{ t("description3") }}</p>
+            <nuxt-link class="block w-48 h-12 mb-8 mx-auto md:mx-0" to="/user-community">
               <PrimaryButton>{{ t("description4") }}</PrimaryButton>
             </nuxt-link>
           </div>
@@ -49,10 +42,7 @@
                 <p class="pl-2 md:pl-4 py-2 md:py-4">
                   {{ t(manual.description) }}
                 </p>
-                <div
-                  class="flex w-full gap-2 md:gap-8 pl-2 md:pl-4 mb-4 md:mb-10"
-                  v-html="t(manual.contents)"
-                ></div>
+                <div class="flex w-full gap-2 md:gap-8 pl-2 md:pl-4 mb-4 md:mb-10" v-html="t(manual.contents)"></div>
               </details>
             </template>
           </div>
@@ -67,15 +57,10 @@
               <summary class="font-semibold">
                 {{ t("description10") }}
               </summary>
-              <div
-                class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4"
-              >
+              <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
                 <p class="leading-6 md:leading-7">
                   {{ t("description11")
-                  }}<a
-                    href="https://www.notion.so/my-integrations"
-                    class="underline"
-                    >https://www.notion.so/my-integrations</a
+                  }}<a href="https://www.notion.so/my-integrations" class="underline">https://www.notion.so/my-integrations</a
                   >{{ t("description12") }} <Code>New Integrations</Code>
                   {{ t("description13") }}
                 </p>
@@ -103,29 +88,21 @@
               <summary class="font-semibold">
                 {{ t("description18") }}
               </summary>
-              <div
-                class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4"
-              >
+              <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
                 <p>
                   {{ t("description19") }}
                 </p>
                 <p>
                   {{ t("description20") }}
                 </p>
-                <img
-                  src="/img/manual/2-2-1.png"
-                  alt=""
-                  class="w-full max-w-xl mx-auto"
-                />
+                <img src="/img/manual/2-2-1.png" alt="" class="w-full max-w-xl mx-auto" />
               </div>
             </details>
             <details class="hover:cursor-pointer">
               <summary class="font-semibold">
                 {{ t("description21") }}
               </summary>
-              <div
-                class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4"
-              >
+              <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
                 <p class="font-semibold">
                   {{ t("description22") }}
                 </p>
@@ -143,9 +120,7 @@
                 </p>
                 <p class="leading-6 md:leading-7 pb-8">
                   {{ t("description28") }}
-                  <Code
-                    >https://www.notion.so/35d/Fast-Notion-81d260a5e5d8473ab32458c7a1971f1e</Code
-                  >
+                  <Code>https://www.notion.so/35d/Fast-Notion-81d260a5e5d8473ab32458c7a1971f1e</Code>
                   {{ t("description29") }}
                   <Code>81d260a5e5d8473ab32458c7a1971f1e</Code>
                   {{ t("description30") }}
@@ -172,23 +147,19 @@
                 <p class="leading-6 md:leading-7">
                   {{ t("description39") }}
                   <Code class="md:hidden"
-                    >https://www.notion.so/35d/a2f9332ec0f9
-                    4d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code
+                    >https://www.notion.so/35d/a2f9332ec0f9 4d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code
                   >
                   <Code class="hidden md:inline"
                     >https://www.notion.so/35d/a2f9332ec0f94d5e9d06581ed864047c?v=a66e42ea25a2476089fc574c72a246cb</Code
                   >
                   {{ t("description40") }}
-                  <Code>a2f9332ec0f94d5e9d06581ed864047c</Code
-                  >{{ t("description41") }}
+                  <Code>a2f9332ec0f94d5e9d06581ed864047c</Code>{{ t("description41") }}
                 </p>
               </div>
             </details>
             <details class="hover:cursor-pointer">
               <summary class="font-semibold">{{ t("description42") }}</summary>
-              <div
-                class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4"
-              >
+              <div class="pl-2 md:pl-4 mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
                 <p>
                   {{ t("description43") }}
                 </p>
@@ -227,10 +198,7 @@
                   {{ t(manual.title) }}
                 </summary>
                 <div class="mb-4 md:mb-10 space-y-1 md:space-y-2 pt-2 md:pt-4">
-                  <p
-                    class="pl-2 md:pl-4 leading-6 md:leading-7"
-                    v-html="t(manual.description)"
-                  ></p>
+                  <p class="pl-2 md:pl-4 leading-6 md:leading-7" v-html="t(manual.description)"></p>
                   <div class="max-w-xl mx-auto">
                     <img :src="manual.imgPath" alt="" v-if="manual.imgPath" />
                   </div>
@@ -265,7 +233,7 @@ const manual1 = [
   {
     title: "manual1Title3",
     description: "manual1Description3",
-    contents: "",
+    contents: "_",
   },
 ];
 const manual3 = [
