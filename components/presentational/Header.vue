@@ -17,9 +17,20 @@
               { 'text-white': shouldHeaderBgTransparentMode },
               { 'text-black1': !shouldHeaderBgTransparentMode },
             ]"
-            >{{ content.title }}</nuxt-link
+            >{{ t(content.title) }}</nuxt-link
           >
         </template>
+        <nuxt-link
+          :class="[
+            'text-sm font-bold ',
+            { 'text-white': shouldHeaderBgTransparentMode },
+            { 'text-black1': !shouldHeaderBgTransparentMode },
+          ]"
+          :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')"
+        >
+          <!-- 日本語 -->
+          {{ t("lang") }}
+        </nuxt-link>
       </div>
       <div class="md:hidden" @click="onClickMenu">
         <button class="h-8 w-9 block relative">
@@ -60,8 +71,14 @@
       <nuxt-link to="/"> <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" class="block w-36 h-auto pl-8" /></nuxt-link>
       <div class="hidden md:flex md:gap-8 pr-8">
         <template v-for="content in headerList" :key="content.title">
-          <nuxt-link :to="content.path" class="text-sm font-bold text-black1">{{ content.title }}</nuxt-link>
+          <nuxt-link :to="content.path" class="text-sm font-bold text-black1">
+            {{ t(content.title) }}
+          </nuxt-link>
         </template>
+        <nuxt-link class="text-sm font-bold text-black1" :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')">
+          <!-- 日本語 -->
+          {{ t("lang") }}
+        </nuxt-link>
       </div>
       <div class="md:hidden pr-8" @click="onClickMenu">
         <button class="h-8 w-9 block relative">
@@ -106,14 +123,19 @@
     </div>
   </header>
 </template>
+
 <script setup lang="ts">
 const router = useRouter();
 const route = useRoute();
+const switchLocalePath = useSwitchLocalePath();
+const { locale, t } = useI18n();
+
 const shouldHeaderBgTransparentMode = computed<boolean>(() => {
-  if (route.fullPath === "/" || route.fullPath === "") {
+  if (route.fullPath === "/" || route.fullPath === "/en" || route.fullPath === "") {
     return true;
   } else return false;
 });
+
 const isPanelOpen = ref<boolean>(false);
 const shouldShowHeader = ref<boolean>(false);
 const onClickMenu = () => {
@@ -133,14 +155,16 @@ const registerHeaderAnimationEvent = () => {
 onMounted(() => {
   registerHeaderAnimationEvent();
 });
-const headerList = [
-  { title: "使い方", path: "/manual" },
-  { title: "リリースノート", path: "/releases" },
-  { title: "よくある質問", path: "/faq" },
-  { title: "お問い合わせ", path: "/contact" },
-];
+const headerList = computed(() => [
+  { title: "manual", path: "/manual" },
+  { title: "releases", path: "/releases" },
+  { title: "faq", path: "/faq" },
+  { title: "contact", path: "/contact" },
+]);
 const jumpToPath = (path: string) => {
   isPanelOpen.value = !isPanelOpen.value;
   router.push(path);
 };
 </script>
+````
+<i18n src="./headerMessage.json"></i18n>

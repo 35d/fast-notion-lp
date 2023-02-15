@@ -1,0 +1,36 @@
+{
+  "en": {
+    "description1": "What you can do with Fast Notion",
+    "description2": "Depending on the page linkage settings with Notion, you can take notes in a variety of formats, including regular text, ToDo blocks, and posting to databases. Multiple pages can be registered, so you can separate your private notes from your work notes.",
+    "description3": "Free to specify memo format",
+    "description4": "It is appreciated by many people.",
+    "description5": "*As of February 2022, 650 evaluations.",
+    "description6": "App Store Rating",
+    "description7": "Cumulative downloads",
+    "database_title": "Database Connection",
+    "database_content": "Send text notes directly to the database",
+    "specification_title": "Specify Multiple Pages",
+    "specification_content": "Specify any page on Notion and post a note",
+    "todo_title": "To-Do mode Support",
+    "todo_content": "Immediately add tasks as they come to mind",
+    "darkmode_title": "Dark mode support",
+    "darkmode_content": "The screen can be changed for better visual readability"
+  },
+  "ja": {
+    "description1": "Fast Notionでできること",
+    "description2": "Notion とのページ連携の設定によって、通常のテキスト、ToDo ブロック、データベースへの投稿などさまざまな形式でメモを取ることができます。複数ページを登録することができるので、プライベート用のメモと仕事用のメモを分けることが出来ます。",
+    "description3": "自由にメモ形式を指定できる",
+    "description4": "多くの方に評価されています",
+    "description5": "※2022年2月時点、650件の評価。",
+    "description6": "App Store評価",
+    "description7": "累計ダウンロード数",
+    "database_title": "データベース接続",
+    "database_content": "データベースに直接テキストメモを送信",
+    "specification_title": "複数ページの指定",
+    "specification_content": "Notion上の好きなページを指定して、メモを投稿",
+    "todo_title": "To Do モード対応",
+    "todo_content": "思いついたタスクを即時に追加",
+    "darkmode_title": "ダークモード対応",
+    "darkmode_content": "視覚的に読みやすい画面に変更可能"
+  }
+}

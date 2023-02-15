@@ -8,4 +8,22 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/main.css"],
+  modules: ["@nuxtjs/i18n"],
+  i18n: {
+    locales: ["ja", "en"],
+    defaultLocale: "ja",
+    detectBrowserLanguage: false,
+    vueI18n: {
+      legacy: false,
+      fallbackLocale: "ja",
+      messages: {
+        en: {
+          lang: "日本語",
+        },
+        ja: {
+          lang: "English",
+        },
+      },
+    },
+  },
 });

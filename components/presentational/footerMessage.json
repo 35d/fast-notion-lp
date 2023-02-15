@@ -1,0 +1,22 @@
+{
+  "en": {
+    "blog": "Blog",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "manual": "How to use",
+    "releases": "Releases",
+    "userCommunity": "User Community",
+    "faq": "FAQ",
+    "contact": "Contact Us"
+  },
+  "ja": {
+    "blog": "開発ブログ",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "manual": "使い方",
+    "releases": "リリースノート",
+    "userCommunity": "ユーザーコミュニティ",
+    "faq": "よくある質問",
+    "contact": "お問い合わせ"
+  }
+}
