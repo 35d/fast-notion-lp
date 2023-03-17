@@ -7,7 +7,8 @@
     "releases": "Releases",
     "userCommunity": "User Community",
     "faq": "FAQ",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "company": "Company"
   },
   "ja": {
     "blog": "開発ブログ",
@@ -17,6 +18,7 @@
     "releases": "リリースノート",
     "userCommunity": "ユーザーコミュニティ",
     "faq": "よくある質問",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "company": "運営会社"
   }
 }
