@@ -20,7 +20,7 @@
     "urlTitle": "Maximum number of URL registered",
     "urlCol2": "Unlimited",
     "_": "",
-    "2": "2"
+    "2": "1"
   },
   "ja": {
     "description1": "料金",
@@ -43,6 +43,6 @@
     "urlTitle": "URL 登録数の上限",
     "urlCol2": "無制限",
     "_": "",
-    "2": "2"
+    "2": "1"
   }
 }
