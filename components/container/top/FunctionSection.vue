@@ -18,7 +18,7 @@
         <img src="~@/assets/img/top/function.png" alt="" class="w-11/12" />
       </div>
     </div>
-    <h3 class="text-center mt-24 mb-10 font-medium text-xl">
+    <h3 class="text-center font-bold mt-24 mb-10 text-xl">
       {{ t("description3") }}
     </h3>
     <div class="mb-8 md:flex md:flex-wrap md:w-4/5 md:mx-auto md:max-w-4xl">
@@ -37,7 +37,7 @@
       </template>
     </div>
     <div class="bg-gray1 py-16 px-6 flex flex-col items-center">
-      <h3 class="text-black1 text-xl font-medium mb-4">
+      <h3 class="text-black1 text-xl font-bold mb-4">
         {{ t("description4") }}
       </h3>
       <p class="text-gray2 text-xs font-medium mb-10">
@@ -56,7 +56,7 @@
         </div>
         <div class="bg-white py-10 px-4 w-1/2 shadow-3xl rounded flex flex-col justify-center">
           <p class="font-[Futura] text-4xl font-medium text-transparent bg-clip-text bg-grad-text text-center mb-4 md:text-6xl">
-            30,000
+            80,000
           </p>
           <p class="text-black1 text-sm font-bold text-center md:text-base">
             {{ t("description7") }}

@@ -26,8 +26,10 @@
                 </p>
                 <p class="text-beige1 text-xs font-medium">
                   {{ t("description5") }}
-                  <span class="text-base font-bold">{{ t("description6") }}</span
-                  >{{ t("description7") }}
+                  <span class="text-base font-bold">{{ t("description6") }}</span>
+                  <span class="ml-1">
+                    {{ t("description7") }}
+                  </span>
                 </p>
                 <p class="text-light_gray text-xs font-medium">
                   {{ t("description8") }}

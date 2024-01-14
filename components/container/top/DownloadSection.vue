@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <img src="~@/assets/img/top/mv-bottom-sp.jpg" alt="" class="md:hidden" />
-    <img src="~@/assets/img/top/mv-bottom-pc.jpg" alt="" class="hidden md:block" />
+    <img src="~@/assets/img/top/mv-bottom-pc.jpg" alt="" class="hidden md:block w-full" />
     <div class="absolute bottom-20 w-full md:flex md:justify-center md:items-center md:bottom-1/3">
       <div class="mx-9">
         <template v-if="locale === 'en'">

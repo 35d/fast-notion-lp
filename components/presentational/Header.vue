@@ -20,6 +20,18 @@
             >{{ t(content.title) }}</nuxt-link
           >
         </template>
+        <a
+          :class="[
+            'text-sm font-bold ',
+            { 'text-white': shouldHeaderBgTransparentMode },
+            { 'text-black1': !shouldHeaderBgTransparentMode },
+          ]"
+          href="https://notion-lab.jp/tags/Fast%20Notion/1/"
+          target="_blank"
+        >
+          <!-- 日本語 -->
+          ブログ
+        </a>
         <nuxt-link
           :class="[
             'text-sm font-bold ',
@@ -75,6 +87,7 @@
             {{ t(content.title) }}
           </nuxt-link>
         </template>
+        <a class="text-sm font-bold text-black1" href="https://notion-lab.jp/tags/Fast%20Notion/1/" target="_blank"> ブログ </a>
         <nuxt-link class="text-sm font-bold text-black1" :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')">
           <!-- 日本語 -->
           {{ t("lang") }}
