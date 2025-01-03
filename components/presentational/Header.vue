@@ -2,42 +2,16 @@
   <header class="z-10 flex justify-center">
     <div class="h-14 md:h-16 mt-2 md:mt-4 flex justify-between items-center w-[calc(100vw-48px)] md:w-4/5 md:max-w-7xl">
       <nuxt-link to="/">
-        <img src="~@/assets/img/parts/fast-notion-white.svg" alt="" v-if="shouldHeaderBgTransparentMode" /><img
-          src="~@/assets/img/parts/fast-notion-black.svg"
-          alt=""
-          class="w-[110px]"
-          v-else
+        <img src="~@/assets/img/parts/fast-notion-white.svg" alt="" v-if="shouldHeaderBgTransparentMode" /><img src="~@/assets/img/parts/fast-notion-black.svg" alt="" class="w-[110px]" v-else
       /></nuxt-link>
       <div class="hidden md:flex md:gap-8">
         <template v-for="content in headerList" :key="content.title">
-          <nuxt-link
-            :to="content.path"
-            :class="[
-              'text-sm font-bold ',
-              { 'text-white': shouldHeaderBgTransparentMode },
-              { 'text-black1': !shouldHeaderBgTransparentMode },
-            ]"
-            >{{ t(content.title) }}</nuxt-link
-          >
+          <nuxt-link :to="content.path" :class="['text-sm font-bold ', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]">{{
+            t(content.title)
+          }}</nuxt-link>
         </template>
-        <a
-          :class="[
-            'text-sm font-bold ',
-            { 'text-white': shouldHeaderBgTransparentMode },
-            { 'text-black1': !shouldHeaderBgTransparentMode },
-          ]"
-          href="https://notion-lab.jp/tags/Fast%20Notion/1/"
-          target="_blank"
-        >
-          <!-- 日本語 -->
-          ブログ
-        </a>
         <nuxt-link
-          :class="[
-            'text-sm font-bold ',
-            { 'text-white': shouldHeaderBgTransparentMode },
-            { 'text-black1': !shouldHeaderBgTransparentMode },
-          ]"
+          :class="['text-sm font-bold ', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]"
           :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')"
         >
           <!-- 日本語 -->
@@ -46,29 +20,9 @@
       </div>
       <div class="md:hidden" @click="onClickMenu">
         <button class="h-8 w-9 block relative">
-          <div
-            :class="[
-              ' h-0.5 w-9 absolute top-1',
-              { 'bg-white': shouldHeaderBgTransparentMode },
-              { 'bg-black1': !shouldHeaderBgTransparentMode },
-            ]"
-          ></div>
-          <div
-            :class="[
-              ' h-0.5 w-9 absolute top-3',
-              { 'bg-white': shouldHeaderBgTransparentMode },
-              { 'bg-black1': !shouldHeaderBgTransparentMode },
-            ]"
-          ></div>
-          <p
-            :class="[
-              'text-xs absolute top-4 text-center',
-              { 'text-white': shouldHeaderBgTransparentMode },
-              { 'text-black1': !shouldHeaderBgTransparentMode },
-            ]"
-          >
-            MENU
-          </p>
+          <div :class="[' h-0.5 w-9 absolute top-1', { 'bg-white': shouldHeaderBgTransparentMode }, { 'bg-black1': !shouldHeaderBgTransparentMode }]"></div>
+          <div :class="[' h-0.5 w-9 absolute top-3', { 'bg-white': shouldHeaderBgTransparentMode }, { 'bg-black1': !shouldHeaderBgTransparentMode }]"></div>
+          <p :class="['text-xs absolute top-4 text-center', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]">MENU</p>
         </button>
       </div>
     </div>
@@ -87,7 +41,6 @@
             {{ t(content.title) }}
           </nuxt-link>
         </template>
-        <a class="text-sm font-bold text-black1" href="https://notion-lab.jp/tags/Fast%20Notion/1/" target="_blank"> ブログ </a>
         <nuxt-link class="text-sm font-bold text-black1" :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')">
           <!-- 日本語 -->
           {{ t("lang") }}
@@ -102,13 +55,7 @@
       </div>
     </div>
     <!-- サイドバー -->
-    <div
-      :class="[
-        'w-full h-full bg-white fixed top-0 z-10 transition-all duration-500',
-        { 'left-0': isPanelOpen },
-        { 'left-full': !isPanelOpen },
-      ]"
-    >
+    <div :class="['w-full h-full bg-white fixed top-0 z-10 transition-all duration-500', { 'left-0': isPanelOpen }, { 'left-full': !isPanelOpen }]">
       <div class="pt-8 px-6 mb-16 flex justify-between">
         <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" class="w-36" />
         <div class="md:hidden" @click="onClickMenu">
@@ -126,12 +73,8 @@
         </div>
       </template>
       <div class="w-full flex justify-center items-center px-10 mt-8">
-        <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"
-          ><img src="~@/assets/img/parts/download-ios.svg" alt=""
-        /></a>
-        <a href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"
-          ><img src="~@/assets/img/parts/download-android.svg" alt=""
-        /></a>
+        <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"><img src="~@/assets/img/parts/download-ios.svg" alt="" /></a>
+        <a href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"><img src="~@/assets/img/parts/download-android.svg" alt="" /></a>
       </div>
     </div>
   </header>

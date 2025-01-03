@@ -1,6 +1,5 @@
 {
   "en": {
-    "blog": "Blog",
     "privacy": "Privacy policy",
     "terms": "Terms of use",
     "manual": "How to use",
@@ -11,7 +10,6 @@
     "company": "Company"
   },
   "ja": {
-    "blog": "ブログ",
     "privacy": "プライバシーポリシー",
     "terms": "利用規約",
     "manual": "設定方法",

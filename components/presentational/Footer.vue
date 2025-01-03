@@ -6,9 +6,6 @@
           <nuxt-link :to="content.path" class="text-black1 font-bold text-sm">{{ t(content.title) }}</nuxt-link>
         </div>
       </template>
-      <div class="p-4">
-        <a href="https://notion-lab.jp/tags/Fast%20Notion/1/" class="text-black1 font-bold text-sm">{{ t("blog") }}</a>
-      </div>
     </div>
     <div class="hidden md:flex md:justify-center md:mb-16">
       <nuxt-link to="/"> <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" /></nuxt-link>
@@ -33,10 +30,6 @@ const contents = [
     title: "releases",
     path: "/releases",
   },
-  // {
-  //   title: "userCommunity",
-  //   path: "/user-community",
-  // },
   {
     title: "faq",
     path: "/faq",
