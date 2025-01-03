@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: ["ja", "en"],
     defaultLocale: "ja",
-    detectBrowserLanguage: false,
+    detectBrowserLanguage: true,
     vueI18n: {
       legacy: false,
       fallbackLocale: "ja",
