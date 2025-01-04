@@ -43,6 +43,12 @@ const FAQ_LIST: Faq[] = [
       "Yes, you can use the Pro Plan on multiple devices with one license. To use it on a second device or beyond, tap the 'Restore Previous Purchase' button on the Pro Plan registration screen. However, please note that you need to subscribe to the Pro Plan separately for iOS and Android devices.",
   },
   {
+    questionJp: "URL Scheme には対応していますか？",
+    questionEn: "Does Fast Notion support URL schemes?",
+    answerJp: "Fast Notion は URL Scheme に対応しています。jp.35d.fast-notion:// から起動可能です。",
+    answerEn: "Fast Notion supports URL schemes. You can launch the app from jp.35d.fast-notion://.",
+  },
+  {
     questionJp: "プロプランからの退会方法を教えて下さい",
     questionEn: "How can I cancel my Pro Plan subscription?",
     answerJp:
