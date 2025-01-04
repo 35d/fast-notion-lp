@@ -3,9 +3,14 @@
     <div class="flex flex-col md:flex-row md:gap-3 md:justify-center p-6 md:mt-12">
       <template v-for="content in contents" :key="content.title">
         <div class="p-4">
-          <nuxt-link :to="content.path" class="text-black1 font-bold text-sm">{{ t(content.title) }}</nuxt-link>
+          <nuxt-link-locale :to="content.path" class="text-black1 font-bold text-sm">{{ t(content.title) }}</nuxt-link-locale>
         </div>
       </template>
+      <div class="p-4">
+        <nuxt-link class="text-sm font-bold text-black1" :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')">
+          {{ locale === "en" ? "日本語" : "ENGLISH" }}
+        </nuxt-link>
+      </div>
     </div>
     <div class="hidden md:flex md:justify-center md:mb-16">
       <nuxt-link to="/"> <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" /></nuxt-link>
@@ -19,8 +24,10 @@
     </div>
   </footer>
 </template>
+
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, locale } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 const contents = [
   {
     title: "manual",

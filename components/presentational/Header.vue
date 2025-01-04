@@ -6,9 +6,9 @@
       /></nuxt-link>
       <div class="hidden md:flex md:gap-8">
         <template v-for="content in headerList" :key="content.title">
-          <nuxt-link :to="content.path" :class="['text-sm font-bold ', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]">{{
+          <nuxt-link-locale :to="content.path" :class="['text-sm font-bold ', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]">{{
             t(content.title)
-          }}</nuxt-link>
+          }}</nuxt-link-locale>
         </template>
         <nuxt-link
           :class="['text-sm font-bold ', { 'text-white': shouldHeaderBgTransparentMode }, { 'text-black1': !shouldHeaderBgTransparentMode }]"
@@ -119,10 +119,7 @@ onMounted(() => {
   registerHeaderAnimationEvent();
 });
 const headerList = computed(() => [
-  {
-    title: "manual",
-    path: locale.value === "en" ? "/en/manual" : "/manual",
-  },
+  { title: "manual", path: "/manual" },
   { title: "releases", path: "/releases" },
   { title: "faq", path: "/faq" },
   { title: "contact", path: "/contact" },
