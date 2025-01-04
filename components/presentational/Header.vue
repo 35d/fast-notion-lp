@@ -72,6 +72,13 @@
           </p>
         </div>
       </template>
+      <div class="p-4 mx-6 mb-3">
+        <nuxt-link class="text-sm font-bold text-black1" :to="switchLocalePath(locale === 'en' ? 'ja' : 'en')">
+          <!-- 日本語 -->
+          {{ t("lang") }}
+        </nuxt-link>
+      </div>
+
       <div class="w-full flex justify-center items-center px-10 mt-8">
         <a href="https://apps.apple.com/jp/app/fast-notion/id1505194382"><img src="~@/assets/img/parts/download-ios.svg" alt="" /></a>
         <a href="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja&gl=US"><img src="~@/assets/img/parts/download-android.svg" alt="" /></a>
@@ -112,7 +119,10 @@ onMounted(() => {
   registerHeaderAnimationEvent();
 });
 const headerList = computed(() => [
-  { title: "manual", path: "/manual" },
+  {
+    title: "manual",
+    path: locale.value === "en" ? "/en/manual" : "/manual",
+  },
   { title: "releases", path: "/releases" },
   { title: "faq", path: "/faq" },
   { title: "contact", path: "/contact" },
@@ -122,5 +132,5 @@ const jumpToPath = (path: string) => {
   router.push(path);
 };
 </script>
-````
+
 <i18n src="./headerMessage.json"></i18n>

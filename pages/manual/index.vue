@@ -20,18 +20,11 @@
           <section class="flex flex-col gap-y-2">
             <h2 class="text-lg font-bold">手動設定（v2.21 以降）</h2>
             <p class="text-bold">※v2.21 より前のバージョンをお使いの方は、Fast Notion のアップデートを行なってください。</p>
-            <p>
-              2024/01/21時点で、一部の端末にて、Notion
-              との接続時にアプリが動かなくなる不具合がございます。アプリが動かなくなってしまう場合には、下記の手順で手動設定をお試しください。
-            </p>
+            <p>2024/01/21時点で、一部の端末にて、Notion との接続時にアプリが動かなくなる不具合がございます。アプリが動かなくなってしまう場合には、下記の手順で手動設定をお試しください。</p>
 
             <p class="font-bold">STEP. 1 インテグレーションの取得と Notion へのコネクト</p>
             <p>
-              <a
-                href="https://notion-lab.jp/2024-01-21-notion-integration-connect/"
-                target="_blank"
-                class="underline text-blue-500"
-                >Notion インテグレーショントークンの取得方法・コネクト設定方法</a
+              <a href="https://notion-lab.jp/2024-01-21-notion-integration-connect/" target="_blank" class="underline text-blue-500">Notion インテグレーショントークンの取得方法・コネクト設定方法</a
               >の記事を参考に、インテグレーションの設定を行なってください。
             </p>
             <p class="font-bold">STEP. 2 Fast Notion 設定</p>
