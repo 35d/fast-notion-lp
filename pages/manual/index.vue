@@ -58,4 +58,4 @@ useHead(() => ({
 }));
 </script>
 
-<i18n src="./index.json"></i18n>
+<!-- <i18n src="./index.json"></i18n> -->
