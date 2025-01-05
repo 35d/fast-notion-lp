@@ -16,9 +16,9 @@
       <nuxt-link to="/"> <img src="~@/assets/img/parts/fast-notion-black.svg" alt="" /></nuxt-link>
     </div>
     <div class="w-full md:bg-beige1 py-6">
-      <div class="flex justify-center md:justify-start md:mx-auto md:max-w-3xl">
-        <nuxt-link to="/privacy" class="text-gray2 text-xs mr-4 md:mr-6">{{ t("privacy") }}</nuxt-link>
-        <nuxt-link to="/terms" class="text-gray2 text-xs mr-4 md:mr-6">{{ t("terms") }}</nuxt-link>
+      <div class="flex justify-center md:justify-center md:mx-auto md:max-w-3xl">
+        <nuxt-link-locale to="/privacy" class="text-gray2 text-xs mr-4 md:mr-6">{{ t("privacy") }}</nuxt-link-locale>
+        <nuxt-link-locale to="/terms" class="text-gray2 text-xs mr-4 md:mr-6">{{ t("terms") }}</nuxt-link-locale>
         <a href="https://temp.co.jp/" target="_blank" class="text-gray2 text-xs">{{ t("company") }}</a>
       </div>
     </div>
