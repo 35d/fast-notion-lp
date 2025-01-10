@@ -33,6 +33,27 @@ useHead(() => ({
 
 const RELEASE_NOTE_LIST: ReleaseNote[] = [
   {
+    title: "v2.25.0",
+    titleEn: "v2.25.0",
+    body: "・内部的なシステムがアップデーとされ、より快適にアプリを利用いただけるようになりました。",
+    bodyEn: "Our internal system has been updated, so you can enjoy an even smoother experience using the app.",
+    dateStr: "2025/01/10",
+  },
+  {
+    title: "v2.24.1",
+    titleEn: "v2.24.1",
+    body: "・軽微な不具合を修正しました。\n一部の画面デザインを変更しました。",
+    bodyEn: "We have fixed minor bugs and updated some of the screen designs.",
+    dateStr: "2025/01/10",
+  },
+  {
+    title: "v2.24.0",
+    titleEn: "v2.24.0",
+    body: "・内部的なシステムがアップデーとされ、より快適にアプリを利用いただけるようになりました。",
+    bodyEn: "Our internal system has been updated, so you can enjoy an even smoother experience using the app.",
+    dateStr: "2025/01/10",
+  },
+  {
     title: "v2.24.0",
     titleEn: "v2.24.0",
     body: "・内部的なシステムをアップグレードし、より快適にアプリを活用いただけるようになりました",
